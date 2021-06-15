@@ -28,7 +28,7 @@
 
   <PropertyGroup Condition=" '$(BuildTarget)' == '46' ">
     <DefineConstants>$(DefineConstants);NO_EVENTARGS_CONSTRAINT;HAS_EDI;HAS_WINRT;HAS_PROGRESS;PREFER_ASYNC;HAS_AWAIT;HAS_APTCA;                                                              HAS_DISPATCHER_PRIORITY;HAS_WINFORMS</DefineConstants>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <!--<NoStdLib>true</NoStdLib>-->
     <BuildPlatform>DESKTOPCLR</BuildPlatform>
     <BuildFlavor>DESKTOPCLR45</BuildFlavor>

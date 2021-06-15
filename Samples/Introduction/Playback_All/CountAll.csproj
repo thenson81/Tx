@@ -10,6 +10,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TxSamples</RootNamespace>
     <AssemblyName>CountAll</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <Import Project="..\..\..\Common.targets" />
   <PropertyGroup>
@@ -51,6 +53,7 @@
       <Link>HTTP_Server.evtx</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Reactive">

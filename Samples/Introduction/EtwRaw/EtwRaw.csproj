@@ -11,6 +11,8 @@
     <RootNamespace>EtwRaw</RootNamespace>
     <AssemblyName>EtwRaw</AssemblyName>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <Import Project="..\..\..\Common.targets" />
   <PropertyGroup>
@@ -42,6 +44,7 @@
     <None Include="..\..\..\Traces\HTTP_Server.etl">
       <Link>HTTP_Server.etl</Link>
     </None>
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Reactive">

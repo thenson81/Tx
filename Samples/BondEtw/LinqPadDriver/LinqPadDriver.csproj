@@ -23,7 +23,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LINQPad" Version="5.22.2" />
+    <PackageReference Include="LINQPad" Version="5.40.0" />
     <PackageReference Include="System.Reactive" Version="4.0.0" />
     <PackageReference Include="System.Reactive.Windows.Forms" Version="4.0.0" />
     <ProjectReference Include="..\..\..\Source\Tx.Core\Tx.Core.csproj" />
