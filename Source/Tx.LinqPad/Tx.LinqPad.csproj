@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net46</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
     <Version>2.1.2</Version>
@@ -23,9 +23,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LINQPad" Version="5.22.2" />
-    <PackageReference Include="System.Reactive" Version="4.0.0" />
-    <PackageReference Include="System.Reactive.Windows.Forms" Version="4.0.0" />
+    <PackageReference Include="LINQPad" Version="5.40.0" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+    <PackageReference Include="System.Reactive.Windows.Forms" Version="5.0.0" />
     <ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
     <ProjectReference Include="..\Tx.SqlServer\Tx.SqlServer.csproj" />
     <ProjectReference Include="..\Tx.Windows.TypeGeneration\Tx.Windows.TypeGeneration.csproj" />

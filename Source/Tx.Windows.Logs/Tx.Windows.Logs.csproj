@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net45;net46;net48</TargetFrameworks>
+    <TargetFrameworks>net48</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -18,22 +18,13 @@
     <RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
     <DelaySign>false</DelaySign>
   </PropertyGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net46'">
-    <PackageReference Include="System.Reactive" Version="4.0.0" />
-  </ItemGroup>
-
+  
   <ItemGroup>
     <ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
     <ProjectReference Include="..\Tx.Windows\Tx.Windows.csproj" />
   </ItemGroup>
-  
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45'">
-    <PackageReference Include="System.Reactive" Version="3.0.0" />
-  </ItemGroup>
-  
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
-    <PackageReference Include="System.Diagnostics.EventLog" Version="4.7.0" />
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net45;net46;net48</TargetFrameworks>
+    <TargetFrameworks>net48</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <DelaySign>false</DelaySign>
     <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
@@ -23,13 +23,6 @@
     <PackageReference Include="System.Reactive" Version="5.0.0" />
   </ItemGroup>
   
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net46'">
-    <PackageReference Include="System.Reactive" Version="4.0.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45'">
-    <PackageReference Include="System.Reactive" Version="3.0.0" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
