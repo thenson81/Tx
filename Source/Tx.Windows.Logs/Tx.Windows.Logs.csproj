@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net48</TargetFrameworks>
+    <TargetFrameworks>net48;net461</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -17,14 +17,18 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
     <DelaySign>false</DelaySign>
+    <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
     <ProjectReference Include="..\Tx.Windows\Tx.Windows.csproj" />
   </ItemGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
-    <PackageReference Include="System.Reactive" Version="5.0.0" />
-  </ItemGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
+		<PackageReference Include="System.Reactive" Version="5.0.0" />
+	</ItemGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net461'">
+		<PackageReference Include="System.Reactive" Version="4.4.1" />
+	</ItemGroup>
 
 </Project>
