@@ -17,6 +17,7 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
     <DelaySign>false</DelaySign>
+    <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'net48'">

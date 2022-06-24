@@ -18,6 +18,7 @@
     <PackageTags>Tx Traces Logs Playback Replay SqlServer</PackageTags>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
+    <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
