@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
 	<PropertyGroup>
 		<TargetFrameworks>net48;net461</TargetFrameworks>
 		<SignAssembly>true</SignAssembly>

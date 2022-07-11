@@ -2,6 +2,7 @@
 [Bb]in
 TestResults
 *.user
+*.vs/
 *.suo
 *.[Cc]ache
 *.bak
@@ -392,3 +393,4 @@ Source/.vs/Tx/DesignTimeBuild/.dtbcache.v2
 *.v2
 /.vs
 *.vsidx
+/Samples/Introduction/.vs/Introduction/v17
