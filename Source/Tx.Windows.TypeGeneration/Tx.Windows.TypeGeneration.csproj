@@ -1,28 +1,29 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-	  <TargetFrameworks>net48;net461</TargetFrameworks>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>3.0.2.0</AssemblyVersion>
-    <FileVersion>3.0.2.0</FileVersion>
-    <Version>3.0.2</Version>
-    <Description>Tx (LINQ to Logs and Traces) Windows TypeGeneration component</Description>
-    <Copyright>Copyright © Microsoft. All Rights Reserved</Copyright>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/Microsoft/Tx/</PackageProjectUrl>
-    <Authors>Microsoft</Authors>
-    <PackageTags>Tx Traces Logs Playback Replay</PackageTags>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
-    <DelaySign>false</DelaySign>
-    <Platforms>AnyCPU;x64;x86</Platforms>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net48;net461</TargetFrameworks>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<AssemblyVersion>3.0.2.0</AssemblyVersion>
+		<FileVersion>3.0.2.0</FileVersion>
+		<Version>3.0.2</Version>
+		<Description>Tx (LINQ to Logs and Traces) Windows TypeGeneration component</Description>
+		<Copyright>Copyright © Microsoft. All Rights Reserved</Copyright>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/Microsoft/Tx/</PackageProjectUrl>
+		<Authors>Microsoft</Authors>
+		<PackageTags>Tx Traces Logs Playback Replay</PackageTags>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
+		<DelaySign>false</DelaySign>
+		<Platforms>AnyCPU;x64;x86</Platforms>
+		<Configurations>Debug461;Release461;Release48;Debug48</Configurations>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
-    <ProjectReference Include="..\Tx.Windows\Tx.Windows.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
+		<ProjectReference Include="..\Tx.Windows\Tx.Windows.csproj" />
+	</ItemGroup>
 
 </Project>

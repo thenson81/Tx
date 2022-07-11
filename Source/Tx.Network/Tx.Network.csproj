@@ -18,6 +18,7 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
     <Platforms>AnyCPU;x64;x86</Platforms>
+    <Configurations>Debug;Release;Release48;Debug48</Configurations>
   </PropertyGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'net48'">

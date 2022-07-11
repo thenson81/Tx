@@ -15,6 +15,12 @@
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release48|AnyCPU'">
+    <OutputPath>bin\Release48\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug48|AnyCPU'">
+    <OutputPath>bin\Debug48\</OutputPath>
+  </PropertyGroup>
   <Import Project="..\..\..\Common.targets" />
   <ItemGroup>
     <Reference Include="System" />

@@ -1,49 +1,43 @@
 <Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net48;net461</TargetFrameworks>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
+		<DelaySign>false</DelaySign>
+		<PlatformTarget>x86</PlatformTarget>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<AssemblyVersion>3.0.2.0</AssemblyVersion>
+		<FileVersion>3.0.2.0</FileVersion>
+		<Version>3.0.2</Version>
+		<Description>Tx SqlServer</Description>
+		<Copyright>Copyright © Microsoft. All Rights Reserved</Copyright>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/Microsoft/Tx/</PackageProjectUrl>
+		<Authors>Microsoft</Authors>
+		<PackageTags>Tx Traces Logs Playback Replay SqlServer</PackageTags>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
+		<Platforms>AnyCPU;x64;x86</Platforms>
+		<Configurations>Debug48;Release48;Debug461;Release461</Configurations>
+	</PropertyGroup>
 
-  <PropertyGroup>
-	  <TargetFrameworks>net48;net461</TargetFrameworks>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
-    <DelaySign>false</DelaySign>
-    <PlatformTarget>x86</PlatformTarget>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>3.0.2.0</AssemblyVersion>
-    <FileVersion>3.0.2.0</FileVersion>
-    <Version>3.0.2</Version>
-    <Description>Tx SqlServer</Description>
-    <Copyright>Copyright © Microsoft. All Rights Reserved</Copyright>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/Microsoft/Tx/</PackageProjectUrl>
-    <Authors>Microsoft</Authors>
-    <PackageTags>Tx Traces Logs Playback Replay SqlServer</PackageTags>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
-    <Platforms>AnyCPU;x64;x86</Platforms>
-  </PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
-  </ItemGroup>
-	<ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
-		<PackageReference Include="System.Reactive" Version="5.0.0" />
+	<ItemGroup>
+		<Reference Include="Microsoft.SqlServer.XE.Core">
+			<HintPath>..\..\References\XEvent\Microsoft.SqlServer.XE.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.SqlServer.XEvent">
+			<HintPath>..\..\References\XEvent\Microsoft.SqlServer.XEvent.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.SqlServer.XEvent.Linq">
+			<HintPath>..\..\References\XEvent\Microsoft.SqlServer.XEvent.Linq.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.SqlServer.XEvent.Targets">
+			<HintPath>..\..\References\XEvent\Microsoft.SqlServer.XEvent.Targets.dll</HintPath>
+		</Reference>
 	</ItemGroup>
-	<ItemGroup Condition=" '$(TargetFramework)' == 'net461'">
-		<PackageReference Include="System.Reactive" Version="4.4.1" />
-	</ItemGroup>
-  
-  <ItemGroup>
-    <Reference Include="Microsoft.SqlServer.XE.Core">
-      <HintPath>..\..\References\XEvent\Microsoft.SqlServer.XE.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.XEvent">
-      <HintPath>..\..\References\XEvent\Microsoft.SqlServer.XEvent.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.XEvent.Linq">
-      <HintPath>..\..\References\XEvent\Microsoft.SqlServer.XEvent.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.XEvent.Targets">
-      <HintPath>..\..\References\XEvent\Microsoft.SqlServer.XEvent.Targets.dll</HintPath>
-    </Reference>
-  </ItemGroup>
 
 </Project>

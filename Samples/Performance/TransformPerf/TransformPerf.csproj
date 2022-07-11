@@ -48,6 +48,12 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\..\..\Source\key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release48|x86'">
+    <OutputPath>bin\x86\Release48\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug48|x86'">
+    <OutputPath>bin\x86\Debug48\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Windows" />
