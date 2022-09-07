@@ -1,0 +1,116 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="DptfCpuEtwProvider" guid="{651e0e5c-0946-43ff-b70f-aecd299b29b4}" resourceFileName="DptfCpuEtwProvider" messageFileName="DptfCpuEtwProvider" symbol="DptfCpuEtwProvider" source="Xml" >
+    <keywords>
+     <keyword name="ApiTrace" message="$(string.keyword_ApiTrace)" mask="0x1"/>
+     <keyword name="Action_const" message="$(string.keyword_Action_const)" mask="0x2"/>
+     <keyword name="Action_msr" message="$(string.keyword_Action_msr)" mask="0x4"/>
+     <keyword name="Action_mmio" message="$(string.keyword_Action_mmio)" mask="0x8"/>
+     <keyword name="Action_acpi" message="$(string.keyword_Action_acpi)" mask="0x10"/>
+     <keyword name="IPC" message="$(string.keyword_IPC)" mask="0x20"/>
+     <keyword name="Command" message="$(string.keyword_Command)" mask="0x40"/>
+     <keyword name="Primitive" message="$(string.keyword_Primitive)" mask="0x80"/>
+     <keyword name="Action" message="$(string.keyword_Action)" mask="0x100"/>
+     <keyword name="Cpc" message="$(string.keyword_Cpc)" mask="0x200"/>
+     <keyword name="Power" message="$(string.keyword_Power)" mask="0x400"/>
+     <keyword name="Dsp" message="$(string.keyword_Dsp)" mask="0x800"/>
+     <keyword name="Event" message="$(string.keyword_Event)" mask="0x1000"/>
+     <keyword name="Elf" message="$(string.keyword_Elf)" mask="0x2000"/>
+     <keyword name="Pmg" message="$(string.keyword_Pmg)" mask="0x4000"/>
+     <keyword name="Queue" message="$(string.keyword_Queue)" mask="0x8000"/>
+     <keyword name="Hash" message="$(string.keyword_Hash)" mask="0x10000"/>
+     <keyword name="Pnp" message="$(string.keyword_Pnp)" mask="0x20000"/>
+     <keyword name="Action_code" message="$(string.keyword_Action_code)" mask="0x40000"/>
+     <keyword name="Domain" message="$(string.keyword_Domain)" mask="0x80000"/>
+     <keyword name="Action_mbi" message="$(string.keyword_Action_mbi)" mask="0x100000"/>
+     <keyword name="Drvm" message="$(string.keyword_Drvm)" mask="0x200000"/>
+     <keyword name="Windows" message="$(string.keyword_Windows)" mask="0x400000"/>
+     <keyword name="Linux" message="$(string.keyword_Linux)" mask="0x800000"/>
+     <keyword name="Action_delegate" message="$(string.keyword_Action_delegate)" mask="0x1000000"/>
+     <keyword name="Lp" message="$(string.keyword_Lp)" mask="0x2000000"/>
+     <keyword name="KIoctl" message="$(string.keyword_KIoctl)" mask="0x4000000"/>
+     <keyword name="Interrupt" message="$(string.keyword_Interrupt)" mask="0x100000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <events>
+     <event value="0" symbol="task_0" version="0" task="task_0" level="win:Always" template="task_0Args"/>
+     <event value="100" symbol="task_0Start" version="0" task="task_0" opcode="win:Start" level="win:Informational" keywords="ApiTrace Windows Interrupt" template="task_0StartArgs"/>
+     <event value="101" symbol="task_0Stop" version="0" task="task_0" opcode="win:Stop" level="win:Informational" keywords="ApiTrace Windows Interrupt" template="task_0StopArgs"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Always" keywords="Windows Interrupt" template="task_0102Args"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Error" keywords="Windows Interrupt" template="task_0102Args"/>
+     <event value="104" symbol="task_0104" version="0" task="task_0" level="win:Warning" keywords="Windows Interrupt" template="task_0102Args"/>
+     <event value="105" symbol="task_0105" version="0" task="task_0" level="win:Informational" keywords="Windows Interrupt" template="task_0102Args"/>
+     <event value="106" symbol="task_0106" version="0" task="task_0" level="win:Informational" keywords="Windows Interrupt" template="task_0106Args"/>
+     <event value="107" symbol="task_0107" version="0" task="task_0" level="win:Informational" keywords="ApiTrace Windows Interrupt" template="task_0107Args"/>
+     <event value="108" symbol="task_0Stop108" version="0" task="task_0" opcode="win:Stop" level="win:Informational" keywords="ApiTrace Windows Interrupt"/>
+     <event value="109" symbol="task_0109" version="0" task="task_0" level="win:Informational" keywords="Windows Interrupt" template="task_0109Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="stringPtr" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0StartArgs">
+      <data name="Interrupt" inType="win:Pointer"/>
+      <data name="MessageID" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0StopArgs">
+      <data name="Status" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0102Args">
+      <data name="String" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0106Args">
+      <data name="String" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0107Args">
+      <data name="Interrupt" inType="win:Pointer"/>
+      <data name="AssociatedObject" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0109Args">
+      <data name="String" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:UInt64"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_ApiTrace" value="ApiTrace"/>
+    <string id="keyword_Action_const" value="Action_const"/>
+    <string id="keyword_Action_msr" value="Action_msr"/>
+    <string id="keyword_Action_mmio" value="Action_mmio"/>
+    <string id="keyword_Action_acpi" value="Action_acpi"/>
+    <string id="keyword_IPC" value="IPC"/>
+    <string id="keyword_Command" value="Command"/>
+    <string id="keyword_Primitive" value="Primitive"/>
+    <string id="keyword_Action" value="Action"/>
+    <string id="keyword_Cpc" value="Cpc"/>
+    <string id="keyword_Power" value="Power"/>
+    <string id="keyword_Dsp" value="Dsp"/>
+    <string id="keyword_Event" value="Event"/>
+    <string id="keyword_Elf" value="Elf"/>
+    <string id="keyword_Pmg" value="Pmg"/>
+    <string id="keyword_Queue" value="Queue"/>
+    <string id="keyword_Hash" value="Hash"/>
+    <string id="keyword_Pnp" value="Pnp"/>
+    <string id="keyword_Action_code" value="Action_code"/>
+    <string id="keyword_Domain" value="Domain"/>
+    <string id="keyword_Action_mbi" value="Action_mbi"/>
+    <string id="keyword_Drvm" value="Drvm"/>
+    <string id="keyword_Windows" value="Windows"/>
+    <string id="keyword_Linux" value="Linux"/>
+    <string id="keyword_Action_delegate" value="Action_delegate"/>
+    <string id="keyword_Lp" value="Lp"/>
+    <string id="keyword_KIoctl" value="KIoctl"/>
+    <string id="keyword_Interrupt" value="Interrupt"/>
+    <string id="task_task_0" value="task_0"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

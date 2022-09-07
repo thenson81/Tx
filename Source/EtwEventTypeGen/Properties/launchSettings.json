@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "EtwEventTypeGen": {
+      "commandName": "Project",
+      "commandLineArgs": "/m:..\\Manifests\\*.man",
+      "workingDirectory": "C:\\FFSB\\src\\Libs\\Spl.Tx\\Generated"
+    }
+  }
+}

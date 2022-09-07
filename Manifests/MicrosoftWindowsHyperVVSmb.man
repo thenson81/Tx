@@ -1,0 +1,291 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Hyper-V-VSmb" guid="{7b0ea079-e3bc-424a-b2f0-e3d8478d204b}" resourceFileName="Microsoft-Windows-Hyper-V-VSmb" messageFileName="Microsoft-Windows-Hyper-V-VSmb" symbol="MicrosoftWindowsHyperVVSmb" source="Xml" >
+    <keywords>
+     <keyword name="Read" message="$(string.keyword_Read)" mask="0x1"/>
+     <keyword name="Write" message="$(string.keyword_Write)" mask="0x2"/>
+     <keyword name="Response" message="$(string.keyword_Response)" mask="0x4"/>
+     <keyword name="DirectMap" message="$(string.keyword_DirectMap)" mask="0x8"/>
+     <keyword name="Share" message="$(string.keyword_Share)" mask="0x10"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="Smb2ResponseNegotiate" message="$(string.task_Smb2ResponseNegotiate)" value="101"/>
+     <task name="Smb2ResponseSessionSetup" message="$(string.task_Smb2ResponseSessionSetup)" value="102"/>
+     <task name="Smb2ResponseLogoff" message="$(string.task_Smb2ResponseLogoff)" value="103"/>
+     <task name="Smb2ResponseTreeConnect" message="$(string.task_Smb2ResponseTreeConnect)" value="104"/>
+     <task name="Smb2ResponseTreeDisconnect" message="$(string.task_Smb2ResponseTreeDisconnect)" value="105"/>
+     <task name="Smb2ResponseEcho" message="$(string.task_Smb2ResponseEcho)" value="106"/>
+     <task name="Smb2ResponseCreate" message="$(string.task_Smb2ResponseCreate)" value="108"/>
+     <task name="Smb2ResponseClose" message="$(string.task_Smb2ResponseClose)" value="109"/>
+     <task name="Smb2ResponseFlush" message="$(string.task_Smb2ResponseFlush)" value="110"/>
+     <task name="Smb2ResponseRead" message="$(string.task_Smb2ResponseRead)" value="111"/>
+     <task name="Smb2ResponseWrite" message="$(string.task_Smb2ResponseWrite)" value="112"/>
+     <task name="Smb2ResponseBreakOplock" message="$(string.task_Smb2ResponseBreakOplock)" value="113"/>
+     <task name="Smb2ResponseAcknowledgeBreakLease" message="$(string.task_Smb2ResponseAcknowledgeBreakLease)" value="115"/>
+     <task name="Smb2ResponseLock" message="$(string.task_Smb2ResponseLock)" value="116"/>
+     <task name="Smb2ResponseIoctl" message="$(string.task_Smb2ResponseIoctl)" value="117"/>
+     <task name="Smb2ResponseQueryDirectory" message="$(string.task_Smb2ResponseQueryDirectory)" value="118"/>
+     <task name="Smb2ResponseChangeNotify" message="$(string.task_Smb2ResponseChangeNotify)" value="119"/>
+     <task name="Smb2ResponseQueryInfo" message="$(string.task_Smb2ResponseQueryInfo)" value="120"/>
+     <task name="Smb2ResponseSetInfo" message="$(string.task_Smb2ResponseSetInfo)" value="121"/>
+     <task name="Smb2ResponseError" message="$(string.task_Smb2ResponseError)" value="122"/>
+     <task name="VSmbnetReadSegmentLength" message="$(string.task_VSmbnetReadSegmentLength)" value="201"/>
+     <task name="VSmbnetReadSegment" message="$(string.task_VSmbnetReadSegment)" value="202"/>
+     <task name="VSmbnetWriteSegment" message="$(string.task_VSmbnetWriteSegment)" value="203"/>
+     <task name="VSmbCreateDirectMapSection" message="$(string.task_VSmbCreateDirectMapSection)" value="204"/>
+     <task name="VSmbDestroyDirectMapSection" message="$(string.task_VSmbDestroyDirectMapSection)" value="205"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Warning" template="task_0Args"/>
+     <event value="3" symbol="task_03" version="0" task="task_0" level="win:Error" template="task_0Args"/>
+     <event value="4" symbol="task_04" version="0" task="task_0" level="win:Critical" template="task_0Args"/>
+     <event value="101" symbol="Smb2ResponseNegotiate_V1" version="1" task="Smb2ResponseNegotiate" level="win:Informational" keywords="Response" template="Smb2ResponseNegotiateArgs_V1"/>
+     <event value="102" symbol="Smb2ResponseSessionSetup_V1" version="1" task="Smb2ResponseSessionSetup" level="win:Informational" keywords="Response" template="Smb2ResponseNegotiateArgs_V1"/>
+     <event value="103" symbol="Smb2ResponseLogoff_V1" version="1" task="Smb2ResponseLogoff" level="win:Informational" keywords="Response" template="Smb2ResponseNegotiateArgs_V1"/>
+     <event value="104" symbol="Smb2ResponseTreeConnect_V1" version="1" task="Smb2ResponseTreeConnect" level="win:Informational" keywords="Response" template="Smb2ResponseTreeConnectArgs_V1"/>
+     <event value="105" symbol="Smb2ResponseTreeDisconnect_V1" version="1" task="Smb2ResponseTreeDisconnect" level="win:Informational" keywords="Response" template="Smb2ResponseNegotiateArgs_V1"/>
+     <event value="106" symbol="Smb2ResponseEcho_V1" version="1" task="Smb2ResponseEcho" level="win:Informational" keywords="Response" template="Smb2ResponseNegotiateArgs_V1"/>
+     <event value="108" symbol="Smb2ResponseCreate_V1" version="1" task="Smb2ResponseCreate" level="win:Informational" keywords="Response" template="Smb2ResponseCreateArgs_V1"/>
+     <event value="109" symbol="Smb2ResponseClose_V1" version="1" task="Smb2ResponseClose" level="win:Informational" keywords="Response" template="Smb2ResponseCreateArgs_V1"/>
+     <event value="110" symbol="Smb2ResponseFlush_V1" version="1" task="Smb2ResponseFlush" level="win:Informational" keywords="Response" template="Smb2ResponseCreateArgs_V1"/>
+     <event value="111" symbol="Smb2ResponseRead_V1" version="1" task="Smb2ResponseRead" level="win:Informational" keywords="Response" template="Smb2ResponseReadArgs_V1"/>
+     <event value="112" symbol="Smb2ResponseWrite_V1" version="1" task="Smb2ResponseWrite" level="win:Informational" keywords="Response" template="Smb2ResponseWriteArgs_V1"/>
+     <event value="113" symbol="Smb2ResponseBreakOplock_V1" version="1" task="Smb2ResponseBreakOplock" level="win:Informational" keywords="Response" template="Smb2ResponseBreakOplockArgs_V1"/>
+     <event value="115" symbol="Smb2ResponseAcknowledgeBreakLease_V1" version="1" task="Smb2ResponseAcknowledgeBreakLease" level="win:Informational" keywords="Response" template="Smb2ResponseAcknowledgeBreakLeaseArgs_V1"/>
+     <event value="116" symbol="Smb2ResponseLock_V1" version="1" task="Smb2ResponseLock" level="win:Informational" keywords="Response" template="Smb2ResponseNegotiateArgs_V1"/>
+     <event value="117" symbol="Smb2ResponseIoctl_V1" version="1" task="Smb2ResponseIoctl" level="win:Informational" keywords="Response" template="Smb2ResponseIoctlArgs_V1"/>
+     <event value="118" symbol="Smb2ResponseQueryDirectory_V1" version="1" task="Smb2ResponseQueryDirectory" level="win:Informational" keywords="Response" template="Smb2ResponseQueryDirectoryArgs_V1"/>
+     <event value="119" symbol="Smb2ResponseChangeNotify_V1" version="1" task="Smb2ResponseChangeNotify" level="win:Informational" keywords="Response" template="Smb2ResponseNegotiateArgs_V1"/>
+     <event value="120" symbol="Smb2ResponseQueryInfo_V1" version="1" task="Smb2ResponseQueryInfo" level="win:Informational" keywords="Response" template="Smb2ResponseQueryInfoArgs_V1"/>
+     <event value="121" symbol="Smb2ResponseSetInfo_V1" version="1" task="Smb2ResponseSetInfo" level="win:Informational" keywords="Response" template="Smb2ResponseQueryInfoArgs_V1"/>
+     <event value="122" symbol="Smb2ResponseError_V1" version="1" task="Smb2ResponseError" level="win:Informational" keywords="Response" template="Smb2ResponseNegotiateArgs_V1"/>
+     <event value="201" symbol="VSmbnetReadSegmentLength_V1" version="1" task="VSmbnetReadSegmentLength" level="win:Informational" keywords="Read" template="VSmbnetReadSegmentLengthArgs_V1"/>
+     <event value="202" symbol="VSmbnetReadSegment_V1" version="1" task="VSmbnetReadSegment" level="win:Informational" keywords="Read" template="VSmbnetReadSegmentLengthArgs_V1"/>
+     <event value="203" symbol="VSmbnetWriteSegment_V1" version="1" task="VSmbnetWriteSegment" level="win:Informational" keywords="Write" template="VSmbnetWriteSegmentArgs_V1"/>
+     <event value="204" symbol="VSmbCreateDirectMapSection_V1" version="1" task="VSmbCreateDirectMapSection" level="win:Informational" keywords="DirectMap" template="VSmbCreateDirectMapSectionArgs_V1"/>
+     <event value="205" symbol="VSmbDestroyDirectMapSection_V1" version="1" task="VSmbDestroyDirectMapSection" level="win:Informational" keywords="DirectMap" template="VSmbCreateDirectMapSectionArgs_V1"/>
+     <event value="301" symbol="task_0301_V1" version="1" task="task_0" level="win:Informational" keywords="Share" template="task_0301Args_V1"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="TraceData" inType="win:UnicodeString"/>
+      <data name="VmName" inType="win:UnicodeString"/>
+      <data name="VmId" inType="win:UnicodeString"/>
+      <data name="StackFrameCount" inType="win:UInt32"/>
+      <data name="StackFrame" inType="win:Pointer" count="StackFrameCount"/>
+      <data name="ModuleCount" inType="win:UInt32"/>
+      <data name="Module" inType="win:Int32" count="ModuleCount"/>
+     </template>
+     <template tid="Smb2ResponseNegotiateArgs_V1">
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="MasterMessageId" inType="win:UInt64"/>
+      <data name="Command" inType="win:UInt16"/>
+      <data name="CreditsGranted" inType="win:UInt16"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ResponseTime_QPC" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2ResponseTreeConnectArgs_V1">
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="MasterMessageId" inType="win:UInt64"/>
+      <data name="Command" inType="win:UInt16"/>
+      <data name="CreditsGranted" inType="win:UInt16"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ResponseTime_QPC" inType="win:UInt64"/>
+      <data name="ShareType" inType="win:UInt8"/>
+      <data name="ShareFlags" inType="win:UInt32"/>
+      <data name="Capabilities" inType="win:UInt32"/>
+      <data name="MaximalAccess" inType="win:UInt32"/>
+     </template>
+     <template tid="Smb2ResponseCreateArgs_V1">
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="MasterMessageId" inType="win:UInt64"/>
+      <data name="Command" inType="win:UInt16"/>
+      <data name="CreditsGranted" inType="win:UInt16"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ResponseTime_QPC" inType="win:UInt64"/>
+      <data name="AllocationSize" inType="win:UInt64"/>
+      <data name="FileNameLength" inType="win:UInt16"/>
+      <data name="FileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="Smb2ResponseReadArgs_V1">
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="MasterMessageId" inType="win:UInt64"/>
+      <data name="Command" inType="win:UInt16"/>
+      <data name="CreditsGranted" inType="win:UInt16"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ResponseTime_QPC" inType="win:UInt64"/>
+      <data name="LengthRead" inType="win:UInt32"/>
+     </template>
+     <template tid="Smb2ResponseWriteArgs_V1">
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="MasterMessageId" inType="win:UInt64"/>
+      <data name="Command" inType="win:UInt16"/>
+      <data name="CreditsGranted" inType="win:UInt16"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ResponseTime_QPC" inType="win:UInt64"/>
+      <data name="LengthWritten" inType="win:UInt32"/>
+      <data name="Remaining" inType="win:UInt32"/>
+      <data name="WriteChannelInfoOffset" inType="win:UInt16"/>
+      <data name="WriteChannelInfoLength" inType="win:UInt16"/>
+     </template>
+     <template tid="Smb2ResponseBreakOplockArgs_V1">
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="MasterMessageId" inType="win:UInt64"/>
+      <data name="Command" inType="win:UInt16"/>
+      <data name="CreditsGranted" inType="win:UInt16"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ResponseTime_QPC" inType="win:UInt64"/>
+      <data name="OplockLevel" inType="win:UInt8"/>
+      <data name="FileId" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2ResponseAcknowledgeBreakLeaseArgs_V1">
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="MasterMessageId" inType="win:UInt64"/>
+      <data name="Command" inType="win:UInt16"/>
+      <data name="CreditsGranted" inType="win:UInt16"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ResponseTime_QPC" inType="win:UInt64"/>
+      <data name="LeaseFlags" inType="win:UInt32"/>
+      <data name="LeaseState" inType="win:UInt32"/>
+      <data name="LeaseDuration" inType="win:Int64"/>
+      <data name="LeaseKey" inType="win:GUID"/>
+     </template>
+     <template tid="Smb2ResponseIoctlArgs_V1">
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="MasterMessageId" inType="win:UInt64"/>
+      <data name="Command" inType="win:UInt16"/>
+      <data name="CreditsGranted" inType="win:UInt16"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ResponseTime_QPC" inType="win:UInt64"/>
+      <data name="ControlCode" inType="win:UInt32"/>
+      <data name="IoctlFlags" inType="win:UInt32"/>
+      <data name="FileId" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2ResponseQueryDirectoryArgs_V1">
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="MasterMessageId" inType="win:UInt64"/>
+      <data name="Command" inType="win:UInt16"/>
+      <data name="CreditsGranted" inType="win:UInt16"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ResponseTime_QPC" inType="win:UInt64"/>
+      <data name="Infoclass" inType="win:UInt64"/>
+     </template>
+     <template tid="Smb2ResponseQueryInfoArgs_V1">
+      <data name="SessionId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TreeId" inType="win:UInt32"/>
+      <data name="MessageId" inType="win:UInt64"/>
+      <data name="MasterMessageId" inType="win:UInt64"/>
+      <data name="Command" inType="win:UInt16"/>
+      <data name="CreditsGranted" inType="win:UInt16"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ResponseTime_QPC" inType="win:UInt64"/>
+      <data name="InfoType" inType="win:UInt32"/>
+      <data name="InfoClass" inType="win:UInt32"/>
+      <data name="AllocationSize" inType="win:UInt64"/>
+      <data name="FileNameLength" inType="win:UInt16"/>
+      <data name="FileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="VSmbnetReadSegmentLengthArgs_V1">
+      <data name="LengthRead" inType="win:UInt32"/>
+      <data name="ResponseTime_QPC" inType="win:UInt64"/>
+     </template>
+     <template tid="VSmbnetWriteSegmentArgs_V1">
+      <data name="LengthWrite" inType="win:UInt32"/>
+      <data name="ResponseTime_QPC" inType="win:UInt64"/>
+     </template>
+     <template tid="VSmbCreateDirectMapSectionArgs_V1">
+      <data name="VMId" inType="win:UnicodeString"/>
+      <data name="GpaPageIndex" inType="win:UInt64"/>
+      <data name="PageCount" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0301Args_V1">
+      <data name="VMId" inType="win:UnicodeString"/>
+      <data name="VMName" inType="win:UnicodeString"/>
+      <data name="ShareName" inType="win:UnicodeString"/>
+      <data name="SharePath" inType="win:UnicodeString"/>
+      <data name="ShareFlags" inType="win:UInt64"/>
+      <data name="ShareJson" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Read" value="Read"/>
+    <string id="keyword_Write" value="Write"/>
+    <string id="keyword_Response" value="Response"/>
+    <string id="keyword_DirectMap" value="DirectMap"/>
+    <string id="keyword_Share" value="Share"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_Smb2ResponseNegotiate" value="Smb2ResponseNegotiate"/>
+    <string id="task_Smb2ResponseSessionSetup" value="Smb2ResponseSessionSetup"/>
+    <string id="task_Smb2ResponseLogoff" value="Smb2ResponseLogoff"/>
+    <string id="task_Smb2ResponseTreeConnect" value="Smb2ResponseTreeConnect"/>
+    <string id="task_Smb2ResponseTreeDisconnect" value="Smb2ResponseTreeDisconnect"/>
+    <string id="task_Smb2ResponseEcho" value="Smb2ResponseEcho"/>
+    <string id="task_Smb2ResponseCreate" value="Smb2ResponseCreate"/>
+    <string id="task_Smb2ResponseClose" value="Smb2ResponseClose"/>
+    <string id="task_Smb2ResponseFlush" value="Smb2ResponseFlush"/>
+    <string id="task_Smb2ResponseRead" value="Smb2ResponseRead"/>
+    <string id="task_Smb2ResponseWrite" value="Smb2ResponseWrite"/>
+    <string id="task_Smb2ResponseBreakOplock" value="Smb2ResponseBreakOplock"/>
+    <string id="task_Smb2ResponseAcknowledgeBreakLease" value="Smb2ResponseAcknowledgeBreakLease"/>
+    <string id="task_Smb2ResponseLock" value="Smb2ResponseLock"/>
+    <string id="task_Smb2ResponseIoctl" value="Smb2ResponseIoctl"/>
+    <string id="task_Smb2ResponseQueryDirectory" value="Smb2ResponseQueryDirectory"/>
+    <string id="task_Smb2ResponseChangeNotify" value="Smb2ResponseChangeNotify"/>
+    <string id="task_Smb2ResponseQueryInfo" value="Smb2ResponseQueryInfo"/>
+    <string id="task_Smb2ResponseSetInfo" value="Smb2ResponseSetInfo"/>
+    <string id="task_Smb2ResponseError" value="Smb2ResponseError"/>
+    <string id="task_VSmbnetReadSegmentLength" value="VSmbnetReadSegmentLength"/>
+    <string id="task_VSmbnetReadSegment" value="VSmbnetReadSegment"/>
+    <string id="task_VSmbnetWriteSegment" value="VSmbnetWriteSegment"/>
+    <string id="task_VSmbCreateDirectMapSection" value="VSmbCreateDirectMapSection"/>
+    <string id="task_VSmbDestroyDirectMapSection" value="VSmbDestroyDirectMapSection"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>
