@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instrumentationManifest    xmlns="http://schemas.microsoft.com/win/2004/08/events"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events"
+    xmlns:trace="http://schemas.microsoft.com/win/2004/08/events/trace"
+    xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd"
+    >
+  <instrumentation>
+    <events>
+	<provider name="Microsoft-Windows-PktMon" symbol="provider0" guid="{4d4f80d9-c8bd-4d73-bb5b-19c90402c5ac}" source="Xml" messageFileName="noMessageFile" resourceFileName="noResourceFile">
+		<events>
+			<event value="10" version="0" template="tid_0" level="win:Error" keywords="keyword0 " message="$(string.string5)" />
+			<event value="20" version="0" template="tid_1" level="win:Informational" keywords="keyword1 " message="$(string.string6)" />
+			<event value="30" version="0" template="tid_2" level="win:Informational" keywords="keyword1 " message="$(string.string7)" />
+			<event value="40" version="0" template="tid_3" level="win:Informational" keywords="keyword1 " message="$(string.string7)" />
+			<event value="50" version="0" template="tid_4" level="win:Informational" keywords="keyword1 " message="$(string.string7)" />
+			<event value="60" version="0" template="tid_5" level="win:Informational" keywords="keyword1 " message="$(string.string7)" />
+			<event value="65" version="0" template="tid_6" level="win:Informational" keywords="keyword1 " message="$(string.string7)" />
+			<event value="66" version="0" template="tid_7" level="win:Informational" keywords="keyword1 " message="$(string.string7)" />
+			<event value="70" version="0" template="tid_8" level="win:Informational" keywords="keyword1 " message="$(string.string8)" />
+			<event value="73" version="0" template="tid_9" level="win:Informational" keywords="keyword1 " message="$(string.string7)" />
+			<event value="75" version="0" template="tid_10" level="win:Informational" keywords="keyword1 " message="$(string.string7)" />
+			<event value="80" version="0" template="tid_11" level="win:Informational" keywords="keyword1 " message="$(string.string9)" />
+			<event value="90" version="0" template="tid_12" level="win:Informational" keywords="keyword1 " message="$(string.string10)" />
+			<event value="100" version="0" template="tid_13" level="win:Informational" keywords="keyword1 " message="$(string.string11)" />
+			<event value="110" version="0" template="tid_14" level="win:Informational" keywords="keyword1 " message="$(string.string11)" />
+			<event value="120" version="0" template="tid_15" level="win:Informational" keywords="keyword2 " message="$(string.string12)" />
+			<event value="130" version="0" template="tid_16" level="win:Informational" keywords="keyword2 " message="$(string.string12)" />
+			<event value="140" version="0" template="tid_15" level="win:Informational" keywords="keyword2 " message="$(string.string13)" />
+			<event value="150" version="0" template="tid_16" level="win:Informational" keywords="keyword2 " message="$(string.string13)" />
+			<event value="160" version="0" template="tid_17" level="win:Informational" keywords="keyword4 " message="$(string.string14)" />
+			<event value="170" version="0" template="tid_17" level="win:Informational" keywords="keyword4 " message="$(string.string15)" />
+			<event value="180" version="0" template="tid_18" level="win:Informational" keywords="keyword3 " message="$(string.string16)" />
+			<event value="190" version="0" template="tid_18" level="win:Informational" keywords="keyword3 " message="$(string.string17)" />
+			<event value="200" version="0" template="tid_19" level="win:Informational" keywords="keyword4 " message="$(string.string18)" />
+			<event value="210" version="0" template="tid_19" level="win:Informational" keywords="keyword4 " message="$(string.string19)" />
+			<event value="220" version="0" template="tid_20" level="win:Informational" keywords="keyword4 " message="$(string.string18)" />
+			<event value="230" version="0" template="tid_20" level="win:Informational" keywords="keyword4 " message="$(string.string19)" />
+			<event value="240" version="0" template="tid_17" level="win:Informational" keywords="keyword4 " message="$(string.string20)" />
+		</events>
+		<keywords>
+			<keyword name="keyword0" mask="0x1" message="$(string.string0)" />
+			<keyword name="keyword1" mask="0x2" message="$(string.string1)" />
+			<keyword name="keyword2" mask="0x4" message="$(string.string2)" />
+			<keyword name="keyword3" mask="0x8" message="$(string.string3)" />
+			<keyword name="keyword4" mask="0x10" message="$(string.string4)" />
+		</keywords>
+		<templates>
+			<template tid="tid_0">
+				<data name="Status" inType="win:UInt32" outType="win:NTSTATUS"></data>
+			</template>
+			<template tid="tid_1">
+				<data name="Id" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Type" inType="win:UInt16" outType="xs:unsignedShort" map="ComponentType"></data>
+				<data name="Name" inType="win:UnicodeString" outType="xs:string"></data>
+				<data name="Description" inType="win:UnicodeString" outType="xs:string"></data>
+			</template>
+			<template tid="tid_2">
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Type" inType="win:UInt16" outType="xs:unsignedShort" map="PropertyType"></data>
+				<data name="Value" inType="win:UInt32" outType="xs:unsignedInt"></data>
+			</template>
+			<template tid="tid_3">
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Type" inType="win:UInt16" outType="xs:unsignedShort" map="PropertyType"></data>
+				<data name="Value" inType="win:GUID" outType="xs:GUID"></data>
+			</template>
+			<template tid="tid_4">
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Type" inType="win:UInt16" outType="xs:unsignedShort" map="PropertyType"></data>
+				<data name="Value" inType="win:UInt32" outType="win:HexInt32"></data>
+			</template>
+			<template tid="tid_5">
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Type" inType="win:UInt16" outType="xs:unsignedShort" map="PropertyType"></data>
+				<data name="Value" inType="win:UInt16" outType="xs:unsignedShort" map="NdisMedium"></data>
+			</template>
+			<template tid="tid_6">
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Type" inType="win:UInt16" outType="xs:unsignedShort" map="PropertyType"></data>
+				<data name="IpAddress" inType="win:UInt32" outType="win:IPv4"></data>
+			</template>
+			<template tid="tid_7">
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Type" inType="win:UInt16" outType="xs:unsignedShort" map="PropertyType"></data>
+				<data name="IpAddress" inType="win:Binary" outType="win:IPv6" length="16"></data>
+			</template>
+			<template tid="tid_8">
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Type" inType="win:UInt16" outType="xs:unsignedShort" map="PropertyType"></data>
+				<data name="Size" inType="win:UInt32" outType="xs:unsignedInt"></data>
+				<data name="Value" inType="win:Binary" outType="xs:hexBinary" length="Size"></data>
+			</template>
+			<template tid="tid_9">
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Type" inType="win:UInt16" outType="xs:unsignedShort" map="PropertyType"></data>
+				<data name="Value" inType="win:UnicodeString" outType="xs:string"></data>
+			</template>
+			<template tid="tid_10">
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Type" inType="win:UInt16" outType="xs:unsignedShort" map="PropertyType"></data>
+				<data name="EtherType" inType="win:UInt16" outType="xs:unsignedShort" map="EtherType"></data>
+			</template>
+			<template tid="tid_11">
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DirTagIn" inType="win:UInt16" outType="xs:unsignedShort" map="PacketDirectionTag"></data>
+				<data name="PacketsIn" inType="win:UInt64" outType="xs:unsignedLong"></data>
+				<data name="BytesIn" inType="win:UInt64" outType="xs:unsignedLong"></data>
+				<data name="DirTagOut" inType="win:UInt16" outType="xs:unsignedShort" map="PacketDirectionTag"></data>
+				<data name="PacketsOut" inType="win:UInt64" outType="xs:unsignedLong"></data>
+				<data name="BytesOut" inType="win:UInt64" outType="xs:unsignedLong"></data>
+			</template>
+			<template tid="tid_12">
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="EdgeName" inType="win:UnicodeString" outType="xs:string"></data>
+				<data name="EdgeId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DirTagIn" inType="win:UInt16" outType="xs:unsignedShort" map="PacketDirectionTag"></data>
+				<data name="PacketsIn" inType="win:UInt64" outType="xs:unsignedLong"></data>
+				<data name="BytesIn" inType="win:UInt64" outType="xs:unsignedLong"></data>
+				<data name="DirTagOut" inType="win:UInt16" outType="xs:unsignedShort" map="PacketDirectionTag"></data>
+				<data name="PacketsOut" inType="win:UInt64" outType="xs:unsignedLong"></data>
+				<data name="BytesOut" inType="win:UInt64" outType="xs:unsignedLong"></data>
+			</template>
+			<template tid="tid_13">
+				<data name="FilterId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="FilterName" inType="win:UnicodeString" outType="xs:string"></data>
+				<data name="MacAddress1" inType="win:Binary" outType="xs:hexBinary" length="6"></data>
+				<data name="MacAddress2" inType="win:Binary" outType="xs:hexBinary" length="6"></data>
+				<data name="EtherType" inType="win:UInt16" outType="xs:unsignedShort" map="EtherType"></data>
+				<data name="VlanId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="IpAddress1" inType="win:UInt32" outType="win:IPv4"></data>
+				<data name="IpAddress2" inType="win:UInt32" outType="win:IPv4"></data>
+				<data name="Protocol" inType="win:UInt8" outType="xs:unsignedByte" map="IPProtocol"></data>
+				<data name="Port1" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Port2" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="TCPFlags" inType="win:UInt8" outType="xs:unsignedByte" map="TCPFlags"></data>
+			</template>
+			<template tid="tid_14">
+				<data name="FilterId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="FilterName" inType="win:UnicodeString" outType="xs:string"></data>
+				<data name="MacAddress1" inType="win:Binary" outType="xs:hexBinary" length="6"></data>
+				<data name="MacAddress2" inType="win:Binary" outType="xs:hexBinary" length="6"></data>
+				<data name="EtherType" inType="win:UInt16" outType="xs:unsignedShort" map="EtherType"></data>
+				<data name="VlanId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="IpAddress1" inType="win:Binary" outType="win:IPv6" length="16"></data>
+				<data name="IpAddress2" inType="win:Binary" outType="win:IPv6" length="16"></data>
+				<data name="Protocol" inType="win:UInt8" outType="xs:unsignedByte" map="IPProtocol"></data>
+				<data name="Port1" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Port2" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="TCPFlags" inType="win:UInt8" outType="xs:unsignedByte" map="TCPFlags"></data>
+			</template>
+			<template tid="tid_15">
+				<data name="DestinationMAC" inType="win:Binary" outType="xs:hexBinary" length="6"></data>
+				<data name="SourceMAC" inType="win:Binary" outType="xs:hexBinary" length="6"></data>
+				<data name="EtherType" inType="win:UInt16" outType="xs:unsignedShort" map="EtherType"></data>
+				<data name="VlanId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DestinationIP" inType="win:UInt32" outType="win:IPv4"></data>
+				<data name="SourceIP" inType="win:UInt32" outType="win:IPv4"></data>
+				<data name="Protocol" inType="win:UInt8" outType="xs:unsignedByte" map="IPProtocol"></data>
+				<data name="DestinationPort" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="SourcePort" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="TCPFlags" inType="win:UInt8" outType="xs:unsignedByte" map="TCPFlags"></data>
+				<data name="PktGroupId" inType="win:UInt64" outType="xs:unsignedLong"></data>
+				<data name="PktCount" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="AppearanceCount" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DirTag" inType="win:UInt16" outType="xs:unsignedShort" map="PacketDirectionTag"></data>
+				<data name="PacketType" inType="win:UInt16" outType="xs:unsignedShort" map="PacketType"></data>
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="EdgeId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="FilterId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DropReason" inType="win:UInt32" outType="xs:unsignedInt" map="DropReason"></data>
+				<data name="DropLocation" inType="win:UInt32" outType="win:HexInt32"></data>
+			</template>
+			<template tid="tid_16">
+				<data name="DestinationMAC" inType="win:Binary" outType="xs:hexBinary" length="6"></data>
+				<data name="SourceMAC" inType="win:Binary" outType="xs:hexBinary" length="6"></data>
+				<data name="EtherType" inType="win:UInt16" outType="xs:unsignedShort" map="EtherType"></data>
+				<data name="VlanId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DestinationIP" inType="win:Binary" outType="win:IPv6" length="16"></data>
+				<data name="SourceIP" inType="win:Binary" outType="win:IPv6" length="16"></data>
+				<data name="Protocol" inType="win:UInt8" outType="xs:unsignedByte" map="IPProtocol"></data>
+				<data name="DestinationPort" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="SourcePort" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="TCPFlags" inType="win:UInt8" outType="xs:unsignedByte" map="TCPFlags"></data>
+				<data name="PktGroupId" inType="win:UInt64" outType="xs:unsignedLong"></data>
+				<data name="PktCount" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="AppearanceCount" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DirTag" inType="win:UInt16" outType="xs:unsignedShort" map="PacketDirectionTag"></data>
+				<data name="PacketType" inType="win:UInt16" outType="xs:unsignedShort" map="PacketType"></data>
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="EdgeId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="FilterId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DropReason" inType="win:UInt32" outType="xs:unsignedInt" map="DropReason"></data>
+				<data name="DropLocation" inType="win:UInt32" outType="win:HexInt32"></data>
+			</template>
+			<template tid="tid_17">
+				<data name="PktGroupId" inType="win:UInt64" outType="xs:unsignedLong"></data>
+				<data name="PktNumber" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="AppearanceCount" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DirTag" inType="win:UInt16" outType="xs:unsignedShort" map="PacketDirectionTag"></data>
+				<data name="PacketType" inType="win:UInt16" outType="xs:unsignedShort" map="PacketType"></data>
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="EdgeId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="FilterId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DropReason" inType="win:UInt32" outType="xs:unsignedInt" map="DropReason"></data>
+				<data name="DropLocation" inType="win:UInt32" outType="win:HexInt32"></data>
+				<data name="OriginalPayloadSize" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="LoggedPayloadSize" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Payload" inType="win:Binary" outType="xs:hexBinary" length="LoggedPayloadSize"></data>
+			</template>
+			<template tid="tid_18">
+				<data name="PktGroupId" inType="win:UInt64" outType="xs:unsignedLong"></data>
+				<data name="PktCount" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="AppearanceCount" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DirTag" inType="win:UInt16" outType="xs:unsignedShort" map="PacketDirectionTag"></data>
+				<data name="PacketType" inType="win:UInt16" outType="xs:unsignedShort" map="PacketType"></data>
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="EdgeId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="FilterId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DropReason" inType="win:UInt32" outType="xs:unsignedInt" map="DropReason"></data>
+				<data name="DropLocation" inType="win:UInt32" outType="win:HexInt32"></data>
+				<data name="TcpIpChecksum" inType="win:Pointer" outType="win:HexInt64"></data>
+				<data name="TcpLargeSend" inType="win:Pointer" outType="win:HexInt64"></data>
+				<data name="Ieee8021Q" inType="win:Pointer" outType="win:HexInt64"></data>
+				<data name="HashInfo" inType="win:Pointer" outType="win:HexInt64"></data>
+				<data name="HashValue" inType="win:Pointer" outType="win:HexInt64"></data>
+				<data name="VirtualSubnetInfo" inType="win:Pointer" outType="win:HexInt64"></data>
+				<data name="TcpRecvSegCoalesceInfo" inType="win:Pointer" outType="win:HexInt64"></data>
+				<data name="NrtNameResolutionId" inType="win:Pointer" outType="win:HexInt64"></data>
+				<data name="TcpSendOffloadsSupplementalInfo" inType="win:Pointer" outType="win:HexInt64"></data>
+				<data name="SwitchForwardingDetail" inType="win:UInt64" outType="win:HexInt64"></data>
+				<data name="GftOffloadInfo" inType="win:UInt64" outType="win:HexInt64"></data>
+				<data name="GftFlowEntryId" inType="win:UInt64" outType="win:HexInt64"></data>
+			</template>
+			<template tid="tid_19">
+				<data name="DirTag" inType="win:UInt16" outType="xs:unsignedShort" map="PacketDirectionTag"></data>
+				<data name="PacketType" inType="win:UInt16" outType="xs:unsignedShort" map="PacketType"></data>
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="EdgeId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="FilterId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DropReason" inType="win:UInt32" outType="xs:unsignedInt" map="DropReason"></data>
+				<data name="DropLocation" inType="win:UInt32" outType="win:HexInt32"></data>
+				<data name="DestinationIP" inType="win:UInt32" outType="win:IPv4"></data>
+				<data name="SourceIP" inType="win:UInt32" outType="win:IPv4"></data>
+				<data name="Protocol" inType="win:UInt8" outType="xs:unsignedByte" map="IPProtocol"></data>
+				<data name="DestinationPort" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="SourcePort" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="OriginalPayloadSize" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="LoggedPayloadSize" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Payload" inType="win:Binary" outType="xs:hexBinary" length="LoggedPayloadSize"></data>
+			</template>
+			<template tid="tid_20">
+				<data name="DirTag" inType="win:UInt16" outType="xs:unsignedShort" map="PacketDirectionTag"></data>
+				<data name="PacketType" inType="win:UInt16" outType="xs:unsignedShort" map="PacketType"></data>
+				<data name="ComponentId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="EdgeId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="FilterId" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="DropReason" inType="win:UInt32" outType="xs:unsignedInt" map="DropReason"></data>
+				<data name="DropLocation" inType="win:UInt32" outType="win:HexInt32"></data>
+				<data name="DestinationIP" inType="win:Binary" outType="win:IPv6" length="16"></data>
+				<data name="SourceIP" inType="win:Binary" outType="win:IPv6" length="16"></data>
+				<data name="Protocol" inType="win:UInt8" outType="xs:unsignedByte" map="IPProtocol"></data>
+				<data name="DestinationPort" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="SourcePort" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="OriginalPayloadSize" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="LoggedPayloadSize" inType="win:UInt16" outType="xs:unsignedShort"></data>
+				<data name="Payload" inType="win:Binary" outType="xs:hexBinary" length="LoggedPayloadSize"></data>
+			</template>
+		</templates>
+		<maps>
+			<valueMap name="ComponentType">
+				<map message="$(string.string21)" value="1" />
+				<map message="$(string.string22)" value="2" />
+				<map message="$(string.string23)" value="3" />
+				<map message="$(string.string24)" value="4" />
+				<map message="$(string.string25)" value="5" />
+				<map message="$(string.string26)" value="6" />
+				<map message="$(string.string27)" value="7" />
+				<map message="$(string.string28)" value="8" />
+				<map message="$(string.string29)" value="9" />
+				<map message="$(string.string30)" value="10" />
+				<map message="$(string.string31)" value="12" />
+				<map message="$(string.string32)" value="13" />
+				<map message="$(string.string33)" value="14" />
+			</valueMap>
+			<valueMap name="PropertyType">
+				<map message="$(string.string34)" value="1" />
+				<map message="$(string.string35)" value="2" />
+				<map message="$(string.string36)" value="3" />
+				<map message="$(string.string37)" value="4" />
+				<map message="$(string.string38)" value="5" />
+				<map message="$(string.string39)" value="6" />
+				<map message="$(string.string40)" value="7" />
+				<map message="$(string.string41)" value="8" />
+				<map message="$(string.string42)" value="9" />
+				<map message="$(string.string43)" value="10" />
+				<map message="$(string.string44)" value="11" />
+				<map message="$(string.string45)" value="12" />
+				<map message="$(string.string46)" value="13" />
+				<map message="$(string.string47)" value="14" />
+				<map message="$(string.string48)" value="15" />
+				<map message="$(string.string49)" value="16" />
+				<map message="$(string.string50)" value="17" />
+			</valueMap>
+			<valueMap name="NdisMedium">
+				<map message="$(string.string51)" value="0" />
+				<map message="$(string.string52)" value="16" />
+				<map message="$(string.string53)" value="19" />
+			</valueMap>
+			<valueMap name="EtherType">
+				<map message="$(string.string54)" value="2048" />
+				<map message="$(string.string55)" value="2054" />
+				<map message="$(string.string49)" value="33024" />
+				<map message="$(string.string56)" value="34525" />
+				<map message="$(string.string57)" value="35020" />
+				<map message="$(string.string58)" value="35033" />
+			</valueMap>
+			<valueMap name="PacketDirectionTag">
+				<map message="$(string.string59)" value="0" />
+				<map message="$(string.string60)" value="1" />
+				<map message="$(string.string61)" value="2" />
+				<map message="$(string.string62)" value="3" />
+				<map message="$(string.string63)" value="4" />
+				<map message="$(string.string64)" value="5" />
+				<map message="$(string.string65)" value="6" />
+			</valueMap>
+			<valueMap name="IPProtocol">
+				<map message="$(string.string66)" value="1" />
+				<map message="$(string.string67)" value="6" />
+				<map message="$(string.string68)" value="17" />
+				<map message="$(string.string69)" value="58" />
+			</valueMap>
+			<bitMap name="TCPFlags">
+				<map message="$(string.string70)" value="0x1" />
+				<map message="$(string.string71)" value="0x2" />
+				<map message="$(string.string72)" value="0x4" />
+				<map message="$(string.string73)" value="0x8" />
+				<map message="$(string.string74)" value="0x10" />
+				<map message="$(string.string75)" value="0x20" />
+				<map message="$(string.string76)" value="0x40" />
+				<map message="$(string.string77)" value="0x80" />
+			</bitMap>
+			<valueMap name="PacketType">
+				<map message="$(string.string78)" value="0" />
+				<map message="$(string.string51)" value="1" />
+				<map message="$(string.string52)" value="2" />
+				<map message="$(string.string79)" value="3" />
+				<map message="$(string.string80)" value="4" />
+			</valueMap>
+			<valueMap name="DropReason">
+				<map message="$(string.string81)" value="0" />
+				<map message="$(string.string82)" value="1" />
+				<map message="$(string.string83)" value="2" />
+				<map message="$(string.string84)" value="3" />
+				<map message="$(string.string85)" value="4" />
+				<map message="$(string.string86)" value="5" />
+				<map message="$(string.string87)" value="6" />
+				<map message="$(string.string88)" value="7" />
+				<map message="$(string.string89)" value="8" />
+				<map message="$(string.string90)" value="9" />
+				<map message="$(string.string91)" value="10" />
+				<map message="$(string.string92)" value="11" />
+				<map message="$(string.string93)" value="12" />
+				<map message="$(string.string94)" value="13" />
+				<map message="$(string.string95)" value="14" />
+				<map message="$(string.string96)" value="15" />
+				<map message="$(string.string97)" value="16" />
+				<map message="$(string.string98)" value="17" />
+				<map message="$(string.string99)" value="18" />
+				<map message="$(string.string100)" value="19" />
+				<map message="$(string.string101)" value="20" />
+				<map message="$(string.string102)" value="21" />
+				<map message="$(string.string103)" value="22" />
+				<map message="$(string.string104)" value="23" />
+				<map message="$(string.string105)" value="24" />
+				<map message="$(string.string106)" value="25" />
+				<map message="$(string.string107)" value="26" />
+				<map message="$(string.string108)" value="27" />
+				<map message="$(string.string109)" value="28" />
+				<map message="$(string.string110)" value="30" />
+				<map message="$(string.string111)" value="31" />
+				<map message="$(string.string112)" value="32" />
+				<map message="$(string.string113)" value="33" />
+				<map message="$(string.string114)" value="34" />
+				<map message="$(string.string115)" value="35" />
+				<map message="$(string.string116)" value="36" />
+				<map message="$(string.string117)" value="37" />
+				<map message="$(string.string118)" value="38" />
+				<map message="$(string.string119)" value="201" />
+				<map message="$(string.string120)" value="202" />
+				<map message="$(string.string121)" value="203" />
+				<map message="$(string.string122)" value="204" />
+				<map message="$(string.string123)" value="401" />
+				<map message="$(string.string124)" value="402" />
+				<map message="$(string.string125)" value="403" />
+				<map message="$(string.string126)" value="404" />
+				<map message="$(string.string127)" value="601" />
+				<map message="$(string.string128)" value="602" />
+				<map message="$(string.string129)" value="603" />
+				<map message="$(string.string130)" value="604" />
+				<map message="$(string.string131)" value="605" />
+				<map message="$(string.string132)" value="606" />
+				<map message="$(string.string133)" value="607" />
+				<map message="$(string.string134)" value="608" />
+				<map message="$(string.string135)" value="609" />
+				<map message="$(string.string136)" value="610" />
+				<map message="$(string.string137)" value="611" />
+				<map message="$(string.string138)" value="612" />
+				<map message="$(string.string139)" value="613" />
+				<map message="$(string.string140)" value="701" />
+				<map message="$(string.string141)" value="702" />
+				<map message="$(string.string142)" value="703" />
+				<map message="$(string.string143)" value="704" />
+				<map message="$(string.string144)" value="705" />
+				<map message="$(string.string145)" value="706" />
+				<map message="$(string.string146)" value="707" />
+				<map message="$(string.string147)" value="708" />
+				<map message="$(string.string148)" value="709" />
+				<map message="$(string.string149)" value="710" />
+				<map message="$(string.string150)" value="711" />
+				<map message="$(string.string151)" value="712" />
+				<map message="$(string.string152)" value="713" />
+				<map message="$(string.string153)" value="714" />
+				<map message="$(string.string154)" value="715" />
+				<map message="$(string.string155)" value="716" />
+				<map message="$(string.string156)" value="717" />
+				<map message="$(string.string157)" value="718" />
+				<map message="$(string.string158)" value="719" />
+				<map message="$(string.string159)" value="901" />
+				<map message="$(string.string160)" value="902" />
+				<map message="$(string.string161)" value="903" />
+				<map message="$(string.string162)" value="904" />
+				<map message="$(string.string163)" value="905" />
+				<map message="$(string.string164)" value="906" />
+				<map message="$(string.string165)" value="907" />
+				<map message="$(string.string166)" value="908" />
+				<map message="$(string.string167)" value="909" />
+				<map message="$(string.string168)" value="910" />
+				<map message="$(string.string169)" value="911" />
+				<map message="$(string.string170)" value="912" />
+				<map message="$(string.string171)" value="913" />
+				<map message="$(string.string172)" value="914" />
+				<map message="$(string.string173)" value="915" />
+				<map message="$(string.string174)" value="916" />
+				<map message="$(string.string175)" value="917" />
+				<map message="$(string.string176)" value="918" />
+				<map message="$(string.string177)" value="919" />
+				<map message="$(string.string178)" value="920" />
+				<map message="$(string.string179)" value="921" />
+				<map message="$(string.string180)" value="922" />
+				<map message="$(string.string181)" value="923" />
+				<map message="$(string.string182)" value="924" />
+				<map message="$(string.string183)" value="925" />
+				<map message="$(string.string184)" value="926" />
+				<map message="$(string.string185)" value="927" />
+				<map message="$(string.string186)" value="928" />
+				<map message="$(string.string187)" value="929" />
+				<map message="$(string.string188)" value="930" />
+				<map message="$(string.string189)" value="931" />
+				<map message="$(string.string190)" value="932" />
+				<map message="$(string.string191)" value="933" />
+				<map message="$(string.string192)" value="934" />
+				<map message="$(string.string193)" value="935" />
+				<map message="$(string.string194)" value="936" />
+				<map message="$(string.string195)" value="937" />
+				<map message="$(string.string196)" value="938" />
+				<map message="$(string.string197)" value="939" />
+				<map message="$(string.string198)" value="940" />
+				<map message="$(string.string199)" value="941" />
+				<map message="$(string.string200)" value="942" />
+				<map message="$(string.string201)" value="943" />
+				<map message="$(string.string202)" value="944" />
+				<map message="$(string.string203)" value="945" />
+				<map message="$(string.string204)" value="946" />
+				<map message="$(string.string205)" value="947" />
+				<map message="$(string.string206)" value="948" />
+				<map message="$(string.string207)" value="949" />
+				<map message="$(string.string208)" value="950" />
+				<map message="$(string.string209)" value="951" />
+				<map message="$(string.string210)" value="952" />
+				<map message="$(string.string211)" value="953" />
+				<map message="$(string.string212)" value="954" />
+				<map message="$(string.string213)" value="955" />
+				<map message="$(string.string214)" value="956" />
+				<map message="$(string.string215)" value="957" />
+				<map message="$(string.string216)" value="958" />
+				<map message="$(string.string217)" value="959" />
+				<map message="$(string.string218)" value="960" />
+				<map message="$(string.string219)" value="961" />
+				<map message="$(string.string220)" value="962" />
+				<map message="$(string.string221)" value="963" />
+				<map message="$(string.string222)" value="964" />
+				<map message="$(string.string223)" value="965" />
+				<map message="$(string.string224)" value="966" />
+				<map message="$(string.string225)" value="967" />
+				<map message="$(string.string226)" value="968" />
+				<map message="$(string.string227)" value="969" />
+				<map message="$(string.string228)" value="970" />
+				<map message="$(string.string229)" value="971" />
+				<map message="$(string.string230)" value="972" />
+				<map message="$(string.string231)" value="973" />
+				<map message="$(string.string232)" value="974" />
+				<map message="$(string.string233)" value="975" />
+				<map message="$(string.string234)" value="976" />
+				<map message="$(string.string235)" value="977" />
+				<map message="$(string.string236)" value="978" />
+				<map message="$(string.string237)" value="979" />
+				<map message="$(string.string238)" value="980" />
+				<map message="$(string.string239)" value="981" />
+				<map message="$(string.string240)" value="982" />
+				<map message="$(string.string241)" value="983" />
+				<map message="$(string.string242)" value="984" />
+				<map message="$(string.string243)" value="985" />
+				<map message="$(string.string244)" value="986" />
+				<map message="$(string.string245)" value="987" />
+				<map message="$(string.string245)" value="988" />
+				<map message="$(string.string245)" value="989" />
+				<map message="$(string.string245)" value="990" />
+				<map message="$(string.string246)" value="991" />
+				<map message="$(string.string247)" value="992" />
+				<map message="$(string.string248)" value="993" />
+				<map message="$(string.string249)" value="994" />
+				<map message="$(string.string250)" value="995" />
+				<map message="$(string.string251)" value="997" />
+				<map message="$(string.string252)" value="1200" />
+				<map message="$(string.string253)" value="1201" />
+				<map message="$(string.string254)" value="1202" />
+				<map message="$(string.string255)" value="1203" />
+				<map message="$(string.string256)" value="1204" />
+				<map message="$(string.string257)" value="1205" />
+				<map message="$(string.string258)" value="1206" />
+				<map message="$(string.string259)" value="1207" />
+				<map message="$(string.string260)" value="1208" />
+				<map message="$(string.string261)" value="1209" />
+				<map message="$(string.string262)" value="1210" />
+				<map message="$(string.string263)" value="1211" />
+				<map message="$(string.string264)" value="1212" />
+				<map message="$(string.string265)" value="1213" />
+				<map message="$(string.string266)" value="1214" />
+				<map message="$(string.string267)" value="1215" />
+				<map message="$(string.string268)" value="1216" />
+				<map message="$(string.string269)" value="1217" />
+				<map message="$(string.string270)" value="1218" />
+				<map message="$(string.string271)" value="1219" />
+				<map message="$(string.string272)" value="1220" />
+				<map message="$(string.string273)" value="1221" />
+				<map message="$(string.string274)" value="1222" />
+				<map message="$(string.string275)" value="1223" />
+				<map message="$(string.string276)" value="1224" />
+				<map message="$(string.string277)" value="1225" />
+				<map message="$(string.string278)" value="1226" />
+				<map message="$(string.string279)" value="1227" />
+				<map message="$(string.string280)" value="1228" />
+				<map message="$(string.string281)" value="1229" />
+				<map message="$(string.string282)" value="1230" />
+				<map message="$(string.string283)" value="1231" />
+				<map message="$(string.string284)" value="1232" />
+				<map message="$(string.string285)" value="1301" />
+				<map message="$(string.string286)" value="1302" />
+				<map message="$(string.string287)" value="1303" />
+				<map message="$(string.string288)" value="1304" />
+				<map message="$(string.string289)" value="1305" />
+				<map message="$(string.string290)" value="1306" />
+				<map message="$(string.string291)" value="1307" />
+				<map message="$(string.string292)" value="1308" />
+				<map message="$(string.string293)" value="1309" />
+				<map message="$(string.string294)" value="1310" />
+				<map message="$(string.string295)" value="1311" />
+				<map message="$(string.string296)" value="1312" />
+				<map message="$(string.string297)" value="1313" />
+				<map message="$(string.string298)" value="1314" />
+				<map message="$(string.string299)" value="1315" />
+				<map message="$(string.string300)" value="1316" />
+				<map message="$(string.string301)" value="1317" />
+				<map message="$(string.string302)" value="1318" />
+				<map message="$(string.string303)" value="1319" />
+				<map message="$(string.string304)" value="1320" />
+				<map message="$(string.string305)" value="1321" />
+				<map message="$(string.string306)" value="1322" />
+				<map message="$(string.string307)" value="1323" />
+				<map message="$(string.string308)" value="1324" />
+				<map message="$(string.string309)" value="1325" />
+				<map message="$(string.string310)" value="1326" />
+				<map message="$(string.string311)" value="1327" />
+				<map message="$(string.string312)" value="1401" />
+				<map message="$(string.string313)" value="1402" />
+				<map message="$(string.string314)" value="1403" />
+				<map message="$(string.string315)" value="1404" />
+				<map message="$(string.string316)" value="1405" />
+				<map message="$(string.string317)" value="1406" />
+				<map message="$(string.string318)" value="1407" />
+				<map message="$(string.string319)" value="1408" />
+				<map message="$(string.string320)" value="1409" />
+				<map message="$(string.string321)" value="1410" />
+				<map message="$(string.string322)" value="1411" />
+				<map message="$(string.string323)" value="1412" />
+				<map message="$(string.string324)" value="1413" />
+				<map message="$(string.string325)" value="1414" />
+				<map message="$(string.string326)" value="1415" />
+				<map message="$(string.string327)" value="1416" />
+				<map message="$(string.string328)" value="1417" />
+				<map message="$(string.string329)" value="1418" />
+				<map message="$(string.string330)" value="1501" />
+				<map message="$(string.string331)" value="1502" />
+				<map message="$(string.string332)" value="1503" />
+				<map message="$(string.string333)" value="1504" />
+				<map message="$(string.string334)" value="1505" />
+				<map message="$(string.string335)" value="1506" />
+				<map message="$(string.string336)" value="1507" />
+			</valueMap>
+		</maps>
+	</provider>
+    </events>
+  </instrumentation>
+<localization>
+	<resources culture="en-US">
+		<stringTable>
+			<string id="string0" value="Config" />
+			<string id="string1" value="Rundown" />
+			<string id="string2" value="NblParsed" />
+			<string id="string3" value="NblInfo" />
+			<string id="string4" value="Payload" />
+			<string id="string5" value="PktMon driver failed to load. Error: %1." />
+			<string id="string6" value="Component %1, Type %2, Name %3, %4" />
+			<string id="string7" value="Property: Component %1, %2 = %3" />
+			<string id="string8" value="Property: Component %1, %2 = %4" />
+			<string id="string9" value="Drop Counters: Component %1, Direction In = %2, Packets In %3, Bytes In %4, Direction Out = %5, Packets Out %6, Bytes Out %7" />
+			<string id="string10" value="Flow Counters: Component %1, Edge %2, Edge Id %3, Direction In = %4, Packets In %5, Bytes In %6, Direction Out = %7, Packets Out %8, Bytes Out %9" />
+			<string id="string11" value="Packet Filter %1, Name %2, MAC-1 %3, MAC-2 %4, EtherType %5, VlanId %6, IP-1 %7, IP-2 %8, Protocol %9, Port-1 %10, Port-2 %11, TCPFlags %12" />
+			<string id="string12" value="MAC Dest %1, MAC Src %2, EtherType %3, VlanId %4, IP Dest %5, IP Src %6, Protocol %7, Port Dest %8, Port Src %9, TCPFlags %10, PktGroupId %11, PktCount %12, Appearance %13, Direction %14, Type %15, Component %16, Edge %17, Filter %18" />
+			<string id="string13" value="Drop: MAC Dest %1, MAC Src %2, EtherType %3, VlanId %4, IP Dest %5, IP Src %6, Protocol %7, Port Dest %8, Port Src %9, TCPFlags %10, PktGroupId %11, PktCount %12, Appearance %13, Direction %14, Type %15, Component %16, Edge %17, Filter %18, DropReason %19, DropLocation %20" />
+			<string id="string14" value="PktGroupId %1, PktNumber %2, Appearance %3, Direction %4, Type %5, Component %6, Edge %7, Filter %8, OriginalSize %11, LoggedSize %12" />
+			<string id="string15" value="Drop: PktGroupId %1, PktNumber %2, Appearance %3, Direction %4, Type %5, Component %6, Filter %8, DropReason %9, DropLocation %10, OriginalSize %11, LoggedSize %12" />
+			<string id="string16" value="TcpIpChecksum %11, TcpLargeSend %12, Ieee8021Q %13, HashInfo %14, HashValue %15, VirtualSubnetInfo %16, TcpRecvSegCoalesceInfo %17, NrtNameResolutionId %18, TcpSendOffloadsSupplementalInfo %19, SwitchForwardingDetail %20, GftOffloadInfo %21, GftFlowEntryId %22, PktGroupId %1, PktCount %2, Appearance %3, Direction %4, Type %5, Component %6, Edge %7, Filter %8" />
+			<string id="string17" value="Drop: TcpIpChecksum %11, TcpLargeSend %12, Ieee8021Q %13, HashInfo %14, HashValue %15, VirtualSubnetInfo %16, TcpRecvSegCoalesceInfo %17, NrtNameResolutionId %18, TcpSendOffloadsSupplementalInfo %19, SwitchForwardingDetail %20, GftOffloadInfo %21, GftFlowEntryId %22, PktGroupId %1, PktCount %2, Appearance %3, Direction %4, Type %5, Component %6, Edge %7, Filter %8, DropReason %9, DropLocation %10" />
+			<string id="string18" value="Direction %1, Type %2, Component %3, Edge %4, Filter %5, OriginalSize %13, LoggedSize %14" />
+			<string id="string19" value="Drop: Direction %1, Type %2, Component %3, Filter %5, DropReason %6, DropLocation %7, OriginalSize %13, LoggedSize %14" />
+			<string id="string20" value="Duplicate Drop: PktGroupId %1, PktNumber %2, Appearance %3, Direction %4, Type %5, Component %6, Filter %8, DropReason %9, DropLocation %10, OriginalSize %11, LoggedSize %12" />
+			<string id="string21" value="NDIS" />
+			<string id="string22" value="Miniport" />
+			<string id="string23" value="Filter" />
+			<string id="string24" value="Protocol" />
+			<string id="string25" value="VmsVmNic" />
+			<string id="string26" value="VmsMiniport" />
+			<string id="string27" value="VmsExtMiniport" />
+			<string id="string28" value="VmsProtocolNic" />
+			<string id="string29" value="NetVsc Miniport" />
+			<string id="string30" value="HTTP Protocol" />
+			<string id="string31" value="Slbmux" />
+			<string id="string32" value="IPSec" />
+			<string id="string33" value="NetCx" />
+			<string id="string34" value="IfIndex" />
+			<string id="string35" value="MiniportIfIndex" />
+			<string id="string36" value="LowerIfIndex" />
+			<string id="string37" value="IfGuid" />
+			<string id="string38" value="NdisMedium" />
+			<string id="string39" value="PhysAddress" />
+			<string id="string40" value="EtherType" />
+			<string id="string41" value="OptDataPath" />
+			<string id="string42" value="NdisObject" />
+			<string id="string43" value="VMSwitchName" />
+			<string id="string44" value="VmsExtIfIndex" />
+			<string id="string45" value="LowestIfIndex" />
+			<string id="string46" value="IP Address" />
+			<string id="string47" value="IpIfIndex" />
+			<string id="string48" value="VSID" />
+			<string id="string49" value="VLAN" />
+			<string id="string50" value="Compartment ID" />
+			<string id="string51" value="Ethernet" />
+			<string id="string52" value="WiFi" />
+			<string id="string53" value="MBB" />
+			<string id="string54" value="IPv4" />
+			<string id="string55" value="ARP" />
+			<string id="string56" value="IPv6" />
+			<string id="string57" value="LLDP" />
+			<string id="string58" value="LLTD" />
+			<string id="string59" value="None" />
+			<string id="string60" value="In" />
+			<string id="string61" value="Out" />
+			<string id="string62" value="Rx" />
+			<string id="string63" value="Tx" />
+			<string id="string64" value="Ingress" />
+			<string id="string65" value="Egress" />
+			<string id="string66" value="ICMP" />
+			<string id="string67" value="TCP" />
+			<string id="string68" value="UDP" />
+			<string id="string69" value="ICMPv6" />
+			<string id="string70" value="FIN" />
+			<string id="string71" value="SYN" />
+			<string id="string72" value="RST" />
+			<string id="string73" value="PSH" />
+			<string id="string74" value="ACK" />
+			<string id="string75" value="URG" />
+			<string id="string76" value="ECE" />
+			<string id="string77" value="CWR" />
+			<string id="string78" value="Unknown" />
+			<string id="string79" value="IP" />
+			<string id="string80" value="HTTP" />
+			<string id="string81" value="Unspecified" />
+			<string id="string82" value="Invalid Data" />
+			<string id="string83" value="Invalid Packet" />
+			<string id="string84" value="Insufficient resources" />
+			<string id="string85" value="Adapter not ready" />
+			<string id="string86" value="Media Disconnected" />
+			<string id="string87" value="Not accepted" />
+			<string id="string88" value="Device busy" />
+			<string id="string89" value="Filtered" />
+			<string id="string90" value="Filtered VLAN" />
+			<string id="string91" value="Unauthorized VLAN" />
+			<string id="string92" value="Unauthorized MAC" />
+			<string id="string93" value="Failed security policy" />
+			<string id="string94" value="Failed pVlan setting" />
+			<string id="string95" value="QoS drop" />
+			<string id="string96" value="IPSec drop" />
+			<string id="string97" value="Spoofed MAC address is not allowed" />
+			<string id="string98" value="Failed DHCP guard" />
+			<string id="string99" value="Failed Router Guard" />
+			<string id="string100" value="Bridge is not allowed inside VM" />
+			<string id="string101" value="Virtual Subnet ID does not match" />
+			<string id="string102" value="Required vSwitch extension is missing" />
+			<string id="string103" value="Creating vSwitch over another vSwitch is not allowed" />
+			<string id="string104" value="MTU mismatch" />
+			<string id="string105" value="Native forwarding required" />
+			<string id="string106" value="Invalid VLAN format" />
+			<string id="string107" value="Invalid destination MAC" />
+			<string id="string108" value="Invalid source MAC" />
+			<string id="string109" value="First NB too small" />
+			<string id="string110" value="Storm limit exceeded" />
+			<string id="string111" value="ICMP request injected by switch" />
+			<string id="string112" value="Failed to update destination list" />
+			<string id="string113" value="Destination NIC is disabled" />
+			<string id="string114" value="Packet does not match destination NIC packet filter" />
+			<string id="string115" value="vSwitch data flow is disabled" />
+			<string id="string116" value="Port isolation setting does not allow untagged traffic" />
+			<string id="string117" value="Invalid PD queue" />
+			<string id="string118" value="Adapter is in low power state" />
+			<string id="string119" value="Adapter paused" />
+			<string id="string120" value="Adapter reset in progress" />
+			<string id="string121" value="Send aborted" />
+			<string id="string122" value="Unsupported EtherType" />
+			<string id="string123" value="Microport error" />
+			<string id="string124" value="VF not ready" />
+			<string id="string125" value="Microport not ready" />
+			<string id="string126" value="VMBus error" />
+			<string id="string127" value="Loopback Ethernet packet" />
+			<string id="string128" value="Invalid SNAP header" />
+			<string id="string129" value="Invalid Ethernet type" />
+			<string id="string130" value="Invalid packet length" />
+			<string id="string131" value="Header not contiguous" />
+			<string id="string132" value="Invalid destination type" />
+			<string id="string133" value="Interface not ready" />
+			<string id="string134" value="Provider not ready" />
+			<string id="string135" value="Invalid LSO information" />
+			<string id="string136" value="Invalid USO information" />
+			<string id="string137" value="Invalid medium type" />
+			<string id="string138" value="Invalid ARP header" />
+			<string id="string139" value="No interface available to receive packets for an isolation ID" />
+			<string id="string140" value="Failed ARP Guard" />
+			<string id="string141" value="Invalid ARP Pkt Limiter" />
+			<string id="string142" value="Invalid DHCP Pkt Limiter" />
+			<string id="string143" value="Broadcast Blocked" />
+			<string id="string144" value="Block Non-IP Pkt" />
+			<string id="string145" value="Invalid ARP Filter" />
+			<string id="string146" value="Failed IPv4 Guard" />
+			<string id="string147" value="Failed IPv6 Guard" />
+			<string id="string148" value="Failed MAC Guard" />
+			<string id="string149" value="No Broadcast destination ports available" />
+			<string id="string150" value="No Unicast destination ports available" />
+			<string id="string151" value="Unicast port not ready" />
+			<string id="string152" value="Switch callback failed" />
+			<string id="string153" value="Invalid ICMPV6 limiter" />
+			<string id="string154" value="Intercept Pkt Drop" />
+			<string id="string155" value="Intercept Blocked" />
+			<string id="string156" value="Failed NDP Guard" />
+			<string id="string157" value="Port Blocked" />
+			<string id="string158" value="NIC Suspended" />
+			<string id="string159" value="Bad source address" />
+			<string id="string160" value="Not locally destined" />
+			<string id="string161" value="Protocol unreachable" />
+			<string id="string162" value="Port unreachable" />
+			<string id="string163" value="Bad length" />
+			<string id="string164" value="Malformed header" />
+			<string id="string165" value="No route available" />
+			<string id="string166" value="Beyond scope" />
+			<string id="string167" value="Inspection drop" />
+			<string id="string168" value="Too many decapsulations" />
+			<string id="string169" value="Administratively prohibited" />
+			<string id="string170" value="Bad checksum" />
+			<string id="string171" value="Max receive path discard reason" />
+			<string id="string172" value="Hop limit exceeded" />
+			<string id="string173" value="Address unreachable" />
+			<string id="string174" value="RSC packet" />
+			<string id="string175" value="Max forward path discard reason" />
+			<string id="string176" value="Arbitration unhandled" />
+			<string id="string177" value="Inspection absorb" />
+			<string id="string178" value="Fragment MTU exceeded" />
+			<string id="string179" value="Buffer length exceeded" />
+			<string id="string180" value="Address resolution timeout" />
+			<string id="string181" value="Address resolution failure" />
+			<string id="string182" value="IPsec failure" />
+			<string id="string183" value="Extension headers failure" />
+			<string id="string184" value="IPSNPI client drop" />
+			<string id="string185" value="Unsupported offload" />
+			<string id="string186" value="Routing failure" />
+			<string id="string187" value="Ancillary data failure" />
+			<string id="string188" value="Raw data failure" />
+			<string id="string189" value="Session state failure" />
+			<string id="string190" value="IPSNPI: modified but not forwarded" />
+			<string id="string191" value="IPSNPI: no next hop specified" />
+			<string id="string192" value="IPSNPI: compartment not found" />
+			<string id="string193" value="IPSNPI: interface not found" />
+			<string id="string194" value="IPSNPI: subinterface not found" />
+			<string id="string195" value="IPSNPI: disabled interface" />
+			<string id="string196" value="IPSNPI: segmentation failed" />
+			<string id="string197" value="IPSNPI: No Ethernet header" />
+			<string id="string198" value="IPSNPI: unexpected fragment" />
+			<string id="string199" value="IPSNPI: unsupported interface type" />
+			<string id="string200" value="IPSNPI: invalid LSO info" />
+			<string id="string201" value="IPSNPI: invalid USO info" />
+			<string id="string202" value="Unexpected internal error" />
+			<string id="string203" value="Administratively configured setting" />
+			<string id="string204" value="Bad option" />
+			<string id="string205" value="This type of packet is not accepted over loopback" />
+			<string id="string206" value="Scope of address is too limited" />
+			<string id="string207" value="Full queue" />
+			<string id="string208" value="Disabled interface" />
+			<string id="string209" value="ICMP: general failure" />
+			<string id="string210" value="ICMP: truncated header" />
+			<string id="string211" value="ICMP: invalid checksum" />
+			<string id="string212" value="ICMP: inspection drop" />
+			<string id="string213" value="ICMP: rejecting loopback neighbor discovery" />
+			<string id="string214" value="ICMP: unknown type/code" />
+			<string id="string215" value="ICMP: truncated IP header" />
+			<string id="string216" value="ICMP: oversized IP header" />
+			<string id="string217" value="ICMP: no handler" />
+			<string id="string218" value="ICMP: not responding with error for error" />
+			<string id="string219" value="ICMP: invalid source" />
+			<string id="string220" value="ICMP: interface rate limit" />
+			<string id="string221" value="ICMP: path rate limit" />
+			<string id="string222" value="ICMP: no route" />
+			<string id="string223" value="ICMP: no matching request" />
+			<string id="string224" value="ICMP: buffer too small" />
+			<string id="string225" value="ICMP: failed to obtain ancillary data" />
+			<string id="string226" value="ICMP: incorrect hop limit" />
+			<string id="string227" value="ICMP: unknown code" />
+			<string id="string228" value="ICMP: source not linklocal" />
+			<string id="string229" value="ICMP: truncated ND header" />
+			<string id="string230" value="ICMP: invalid ND option SourceLinkAddr" />
+			<string id="string231" value="ICMP: invalid ND option MTU" />
+			<string id="string232" value="ICMP: invalid ND option PrefixInformation" />
+			<string id="string233" value="ICMP: invalid ND option RouteInformation" />
+			<string id="string234" value="ICMP: invalid ND option RDNSS" />
+			<string id="string235" value="ICMP: invalid ND option DNSSL" />
+			<string id="string236" value="ICMP: packet parsing failure" />
+			<string id="string237" value="ICMP: disallowed by the current configuration" />
+			<string id="string238" value="ICMP: invalid router advertisement" />
+			<string id="string239" value="ICMP: source address is not on the same link as this interface" />
+			<string id="string240" value="ICMP: invalid destination or target address for redirect message" />
+			<string id="string241" value="ICMP: invalid neighbor discovery target" />
+			<string id="string242" value="ICMP: invalid neighbor advertisement - the solicited flag cannot be set if the destination address is multicast" />
+			<string id="string243" value="ICMP: the link layer address belongs to this interface" />
+			<string id="string244" value="ICMP: duplicate echo request" />
+			<string id="string245" value="ICMP: router advertisement came from a router that is not part of the potential router list" />
+			<string id="string246" value="ICMP: not locally destined" />
+			<string id="string247" value="ARP: invalid source" />
+			<string id="string248" value="ARP: invalid target" />
+			<string id="string249" value="ARP: the source address in the DL header belongs to the local interface" />
+			<string id="string250" value="ARP: not locally destined" />
+			<string id="string251" value="IPSNPI: URO segment size exceeds forward interface MTU" />
+			<string id="string252" value="INET: source unspecified" />
+			<string id="string253" value="INET: destination is multicast" />
+			<string id="string254" value="INET: header is invalid" />
+			<string id="string255" value="INET: checksum is invalid" />
+			<string id="string256" value="INET: transport endpoint was not found" />
+			<string id="string257" value="INET: connected path error" />
+			<string id="string258" value="INET: session state error" />
+			<string id="string259" value="INET: receive inspection" />
+			<string id="string260" value="INET: invalid ACK in SYN_SENT state" />
+			<string id="string261" value="INET: expected SYN" />
+			<string id="string262" value="INET: received RST" />
+			<string id="string263" value="INET: received SYN while in SYN_RCVD state" />
+			<string id="string264" value="INET: simultaneous connect" />
+			<string id="string265" value="INET: PAWS failed" />
+			<string id="string266" value="INET: land attack" />
+			<string id="string267" value="INET: missed RST" />
+			<string id="string268" value="INET: outside receive window" />
+			<string id="string269" value="INET: duplicate segment" />
+			<string id="string270" value="INET: closed window" />
+			<string id="string271" value="INET: TCB removed" />
+			<string id="string272" value="INET: FIN-WAIT2" />
+			<string id="string273" value="INET: reassembly conflict" />
+			<string id="string274" value="INET: FIN received" />
+			<string id="string275" value="INET: listener received segment with invalid flags" />
+			<string id="string276" value="INET: TCB was not inserted in TCB table" />
+			<string id="string277" value="INET: TIME-WAIT TCB received RST outside receive window" />
+			<string id="string278" value="INET: TIME-WAIT TCB received segment with SYN and other flags set" />
+			<string id="string279" value="INET: packet dropped by TIME_WAIT TCB" />
+			<string id="string280" value="INET: SYN+ACK with fastopen cookie request" />
+			<string id="string281" value="INET: listener dropped SYN because SO_PAUSE_ACCEPT was set" />
+			<string id="string282" value="INET: listener dropped SYN to reduce memory pressure" />
+			<string id="string283" value="INET: accept inspection" />
+			<string id="string284" value="INET: accept redirection" />
+			<string id="string285" value="SlbMux: Parsing failure" />
+			<string id="string286" value="SluMux: First packet for the fragmented datagram is not at offset 0" />
+			<string id="string287" value="SlbMux: Failed to parse or validate the IP packet contained in the ICMP error message payload" />
+			<string id="string288" value="SlbMux: IP packet contained in the ICMP error message payload does not match any existing session" />
+			<string id="string289" value="SlbMux: Failed to find a nexthop for external hairpinning" />
+			<string id="string290" value="SlbMux: No matching static mapping exists to let the packet in" />
+			<string id="string291" value="SlbMux: Failed to acquire a reference on the nexthop object" />
+			<string id="string292" value="SlbMux: Failed to clone the packet" />
+			<string id="string293" value="SlbMux: Failed to translate the packet" />
+			<string id="string294" value="SlbMux: Hop limit exceeded" />
+			<string id="string295" value="SlbMux: Packet is larger than nexthop MTU and cannot be fragmented" />
+			<string id="string296" value="SlbMux: Unexpected route lookup failure" />
+			<string id="string297" value="SlbMux: No route to packet destination was found" />
+			<string id="string298" value="SlbMux: Failed to create a session object" />
+			<string id="string299" value="SlbMux: The interface over which the packet is to be routed is not a SLBMUX external interface" />
+			<string id="string300" value="SlbMux: The interface over which the packet is to be routed does not have a matching SLBMUX instancee" />
+			<string id="string301" value="SlbMux: SLBMUX device itself is not allowed to be an internal host at the same time" />
+			<string id="string302" value="SlbMux: Packet is routable in its own arrival compartment" />
+			<string id="string303" value="SlbMux: Packet transport protocol is not supported by SLBMUX" />
+			<string id="string304" value="SlbMux: Packet is destined to SLBMUX itself" />
+			<string id="string305" value="SlbMux: Packet destination address and port do not fall within any SLBMUX external address port range" />
+			<string id="string306" value="SlbMux: SLBMUX rejected the packet" />
+			<string id="string307" value="SlbMux: SLBMUX failed to find the Vip/Dip configuration" />
+			<string id="string308" value="SlbMux: SLBMUX failed to send the encapsulated packet" />
+			<string id="string309" value="SlbMux: SLBMUX found invalid reachability encap type for diagnostic packet" />
+			<string id="string310" value="SlbMux: SLBMUX received redirect packet as the diagnostic packet" />
+			<string id="string311" value="SlbMux: SLBMUX unable to handle redirect packet" />
+			<string id="string312" value="IPSEC: The SPI in the packet does not match a valid IPsec SA" />
+			<string id="string313" value="IPSEC: Packet was received on an IPsec SA whose lifetime has expired" />
+			<string id="string314" value="IPSEC: Packet was received on an IPsec SA that does not match the packet characteristics" />
+			<string id="string315" value="IPSEC: Packet sequence number replay check failed" />
+			<string id="string316" value="IPSEC: IPsec header and/or trailer in the packet is invalid" />
+			<string id="string317" value="IPSEC: IPsec integrity check failed" />
+			<string id="string318" value="IPSEC: IPsec dropped a clear text packet" />
+			<string id="string319" value="IPSEC: IPsec dropped an incoming ESP packet in authenticated firewall mode" />
+			<string id="string320" value="IPSEC: IPsec dropped a packet due to DoS throttling" />
+			<string id="string321" value="IPSEC: IPsec DoS Protection matched an explicit block rule" />
+			<string id="string322" value="IPSEC: IPsec DoS Protection received an IPsec specific multicast packet which is not allowed" />
+			<string id="string323" value="IPSEC: IPsec DoS Protection received an incorrectly formatted packet" />
+			<string id="string324" value="IPSEC: IPsec DoS Protection failed to look up state" />
+			<string id="string325" value="IPSEC: IPsec DoS Protection failed to create state because the maximum number of entries allowed by policy has been reached" />
+			<string id="string326" value="IPSEC: IPsec DoS Protection received an IPsec negotiation packet for a keying module which is not allowed by policy" />
+			<string id="string327" value="IPSEC: IPsec DoS Protection failed to create a per internal IP rate limit queue because the maximum number of queues allowed by policy has been reached" />
+			<string id="string328" value="IPSEC: Failed to allocate memory" />
+			<string id="string329" value="IPSEC: Operation was unsuccessful" />
+			<string id="string330" value="NETCX: Failed to parse NetPacket Layout correctly" />
+			<string id="string331" value="NETCX: Failed to calculate NetBuffer software checksum" />
+			<string id="string332" value="NETCX: Queue is being stopped or destroyed" />
+			<string id="string333" value="NETCX: Invalid NetBuffer size" />
+			<string id="string334" value="NETCX: Large Send Offload (LSO) failure" />
+			<string id="string335" value="NETCX: UDP Segmentation Offload (USO) failure" />
+			<string id="string336" value="NETCX: NetBuffer bounce operation failed" />
+		</stringTable>
+	</resources>
+</localization>
+</instrumentationManifest>
