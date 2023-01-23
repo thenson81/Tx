@@ -58,6 +58,8 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+
+*.dtbcache*
 # Visual Studio 2015/2017 cache/options directory
 */.vs/*
 /Source/.vs/*
@@ -394,3 +396,5 @@ Source/.vs/Tx/DesignTimeBuild/.dtbcache.v2
 /.vs
 *.vsidx
 /Samples/Introduction/.vs/Introduction/v17
+/Source/.vs/
+/Source/.vs/Tx/DesignTimeBuild/.dtbcache.v2
