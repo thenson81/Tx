@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <TargetFrameworks>net48;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net48</TargetFrameworks>
+    <!--<TargetFrameworks>net48;net461</TargetFrameworks>-->
     <SignAssembly>true</SignAssembly>
     <DelaySign>false</DelaySign>
     <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
@@ -17,17 +18,17 @@
     <PackageTags>Tx Traces Logs Playback Replay Network</PackageTags>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
-    <Platforms>AnyCPU;x64;x86</Platforms>
-    <Configurations>Debug;Release;Release48;Debug48</Configurations>
+  <Platforms>AnyCPU;x64;x86</Platforms>
+  <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
-	<ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
-		<PackageReference Include="System.Reactive" Version="5.0.0" />
-	</ItemGroup>
-	<ItemGroup Condition=" '$(TargetFramework)' == 'net461'">
-		<PackageReference Include="System.Reactive" Version="4.4.1" />
-	</ItemGroup>
-
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+    <!--<PackageReference Include="System.Diagnostics.EventLog" Version="7.0.0" />-->
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+  </ItemGroup>
 
 	<ItemGroup>
     <ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />

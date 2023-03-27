@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net48;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net48</TargetFrameworks>
+    <!--<TargetFrameworks>net48;net461</TargetFrameworks>-->
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
 		<DelaySign>false</DelaySign>
@@ -17,14 +18,16 @@
 		<PackageTags>Tx Traces Logs Playback Replay SqlServer</PackageTags>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
-		<Platforms>AnyCPU;x64;x86</Platforms>
-		<Configurations>Debug48;Release48;Debug461;Release461</Configurations>
-	</PropertyGroup>
-
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
 	</ItemGroup>
-
+  <!--<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Diagnostics.EventLog" Version="7.0.0" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+  </ItemGroup>-->
 	<ItemGroup>
 		<Reference Include="Microsoft.SqlServer.XE.Core">
 			<HintPath>..\..\References\XEvent\Microsoft.SqlServer.XE.Core.dll</HintPath>
