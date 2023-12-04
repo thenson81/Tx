@@ -1,11 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;net48</TargetFrameworks>
+		<TargetFrameworks>net7.0</TargetFrameworks>
 		<!--<TargetFrameworks>net48;net461</TargetFrameworks>-->
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
 		<DelaySign>false</DelaySign>
-		<PlatformTarget>x86</PlatformTarget>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<AssemblyVersion>3.0.2.0</AssemblyVersion>
 		<FileVersion>3.0.2.0</FileVersion>
@@ -18,29 +17,45 @@
 		<PackageTags>Tx Traces Logs Playback Replay SqlServer</PackageTags>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
+		<DelaySign>false</DelaySign>
 		<Platforms>AnyCPU;x64;x86</Platforms>
-		<Configurations>Debug;Release;net70Release;net70Debug</Configurations>
+		<Configurations>net70Release;net70Debug</Configurations>
 	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SqlServer.XEvent.XELite" Version="2023.1.30.3" />
+	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
 	</ItemGroup>
-	<!--<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="System.Diagnostics.EventLog" Version="7.0.0" />
-    <PackageReference Include="System.Reactive" Version="5.0.0" />
-  </ItemGroup>-->
-	<ItemGroup>
+	<ItemGroup Condition=" '$(Platform)' != 'x86'">
 		<Reference Include="Microsoft.SqlServer.XE.Core">
-			<HintPath>..\..\References\XEvent\Microsoft.SqlServer.XE.Core.dll</HintPath>
+			<HintPath>..\..\References\XEvent\x64\Microsoft.SqlServer.XE.Core.dll</HintPath>
 		</Reference>
 		<Reference Include="Microsoft.SqlServer.XEvent">
-			<HintPath>..\..\References\XEvent\Microsoft.SqlServer.XEvent.dll</HintPath>
+			<HintPath>..\..\References\XEvent\x64\Microsoft.SqlServer.XEvent.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.SqlServer.XEvent.Configuration">
+			<HintPath>..\..\References\XEvent\x64\Microsoft.SqlServer.XEvent.Configuration.dll</HintPath>
 		</Reference>
 		<Reference Include="Microsoft.SqlServer.XEvent.Linq">
-			<HintPath>..\..\References\XEvent\Microsoft.SqlServer.XEvent.Linq.dll</HintPath>
+			<HintPath>..\..\References\XEvent\x64\Microsoft.SqlServer.XEvent.Linq.dll</HintPath>
 		</Reference>
 		<Reference Include="Microsoft.SqlServer.XEvent.Targets">
-			<HintPath>..\..\References\XEvent\Microsoft.SqlServer.XEvent.Targets.dll</HintPath>
+			<HintPath>..\..\References\XEvent\x64\Microsoft.SqlServer.XEvent.Targets.dll</HintPath>
 		</Reference>
 	</ItemGroup>
-
+	<ItemGroup Condition=" '$(Platform)' == 'x86'">
+		<Reference Include="Microsoft.SqlServer.XE.Core">
+			<HintPath>..\..\References\XEvent\x86\Microsoft.SqlServer.XE.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.SqlServer.XEvent">
+			<HintPath>..\..\References\XEvent\x86\Microsoft.SqlServer.XEvent.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.SqlServer.XEvent.Linq">
+			<HintPath>..\..\References\XEvent\x86\Microsoft.SqlServer.XEvent.Linq.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.SqlServer.XEvent.Targets">
+			<HintPath>..\..\References\XEvent\x86\Microsoft.SqlServer.XEvent.Targets.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 </Project>

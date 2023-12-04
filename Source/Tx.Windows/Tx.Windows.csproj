@@ -18,14 +18,11 @@
 		<RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
 		<DelaySign>false</DelaySign>
 		<Platforms>AnyCPU;x64;x86</Platforms>
-		<Configurations>Debug;Release;net70Release;net70Debug</Configurations>
+		<Configurations>net70Release;net70Debug</Configurations>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<BaseIntermediateOutputPath>..\..\Build\obj\</BaseIntermediateOutputPath>
+		<BaseOutputPath>..\..\Build\</BaseOutputPath>
 	</PropertyGroup>
-	<PropertyGroup>
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-	</PropertyGroup>
-	<ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
-		<PackageReference Include="System.Reactive" Version="5.0.0" />
-	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
 	</ItemGroup>

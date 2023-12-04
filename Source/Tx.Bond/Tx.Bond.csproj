@@ -1,39 +1,39 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <!--<TargetFrameworks>net48;net461</TargetFrameworks>-->
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>3.0.2.0</AssemblyVersion>
-    <FileVersion>3.0.2.0</FileVersion>
-    <Version>3.0.2</Version>
-    <Description>Tx Bond components, specific to the Bond event format</Description>
-    <Copyright>Copyright © Microsoft. All Rights Reserved</Copyright>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/Microsoft/Tx/</PackageProjectUrl>
-    <Authors>Microsoft</Authors>
-    <PackageTags>Tx Traces Bond Logs Playback Replay</PackageTags>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
-    <DelaySign>false</DelaySign>
-    <Platforms>AnyCPU;x64;x86</Platforms>
-    <Configurations>Debug;Release;net70Release;net70Debug</Configurations>
-  </PropertyGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
-    <PackageReference Include="System.Reactive" Version="5.0.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
-    <ProjectReference Include="..\Tx.Windows\Tx.Windows.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Bond">
-      <HintPath>..\..\References\DESKTOPCLR45\Bond.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="Bond.Attributes">
-      <HintPath>..\..\References\DESKTOPCLR45\Bond.Attributes.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<!--<TargetFrameworks>net48;net461</TargetFrameworks>-->
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<AssemblyVersion>3.0.2.0</AssemblyVersion>
+		<FileVersion>3.0.2.0</FileVersion>
+		<Version>3.0.2</Version>
+		<Description>Tx Bond components, specific to the Bond event format</Description>
+		<Copyright>Copyright © Microsoft. All Rights Reserved</Copyright>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/Microsoft/Tx/</PackageProjectUrl>
+		<Authors>Microsoft</Authors>
+		<PackageTags>Tx Traces Bond Logs Playback Replay</PackageTags>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
+		<DelaySign>false</DelaySign>
+		<Platforms>AnyCPU;x64;x86</Platforms>
+		<Configurations>net70Release;net70Debug</Configurations>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<BaseIntermediateOutputPath>..\..\Build\obj\</BaseIntermediateOutputPath>
+		<BaseOutputPath>..\..\Build\</BaseOutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
+		<ProjectReference Include="..\Tx.Windows\Tx.Windows.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="Bond">
+			<HintPath>..\..\References\DESKTOPCLR45\Bond.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Web.Extensions" />
+		<Reference Include="Bond.Attributes">
+			<HintPath>..\..\References\DESKTOPCLR45\Bond.Attributes.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 </Project>
