@@ -1,40 +1,79 @@
 <Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net48</TargetFrameworks>
+  <PropertyGroup>
+    <TargetFrameworks>net7.0</TargetFrameworks>
     <!--<TargetFrameworks>net48;net461</TargetFrameworks>-->
-		<SignAssembly>true</SignAssembly>
-		<AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<AssemblyVersion>3.0.2.0</AssemblyVersion>
-		<FileVersion>3.0.2.0</FileVersion>
-		<Version>3.0.2</Version>
-		<Description>Tx (LINQ to Logs and Traces) core components, not specific to the event format</Description>
-		<Copyright>Copyright © Microsoft. All Rights Reserved</Copyright>
-		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-		<PackageProjectUrl>https://github.com/Microsoft/Tx/</PackageProjectUrl>
-		<Authors>Microsoft</Authors>
-		<PackageTags>Tx Traces Logs Playback Replay</PackageTags>
-		<RepositoryType>git</RepositoryType>
-		<RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
-		<DelaySign>false</DelaySign>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>3.0.2.0</AssemblyVersion>
+    <FileVersion>3.0.2.0</FileVersion>
+    <Version>3.0.2</Version>
+    <Description>Tx (LINQ to Logs and Traces) core components, not specific to the event format</Description>
+    <Copyright>Copyright © Microsoft. All Rights Reserved</Copyright>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Microsoft/Tx/</PackageProjectUrl>
+    <Authors>Microsoft</Authors>
+    <PackageTags>Tx Traces Logs Playback Replay</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
+    <DelaySign>false</DelaySign>
     <Platforms>AnyCPU;x64;x86</Platforms>
-    <Configurations>Debug;Release</Configurations>
-	</PropertyGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
-    <!--<PackageReference Include="System.Diagnostics.EventLog" Version="7.0.0" />-->
-    <PackageReference Include="System.Reactive" Version="5.0.0" />
-  </ItemGroup>
+    <Configurations>Debug;Release;net70Release;net70Debug</Configurations>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <BaseIntermediateOutputPath>..\..\Build\obj\</BaseIntermediateOutputPath>
+    <BaseOutputPath>..\..\Build\</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0|AnyCPU'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0|x64'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0|x86'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0|AnyCPU'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0|x64'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0|x86'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='net70Release|net7.0|AnyCPU'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='net70Release|net7.0|x64'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='net70Release|net7.0|x86'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='net70Debug|net7.0|AnyCPU'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='net70Debug|net7.0|x64'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='net70Debug|net7.0|x86'">
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+  </PropertyGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
     <PackageReference Include="System.Reactive" Version="5.0.0" />
   </ItemGroup>
 
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
+		<PackageReference Include="System.Reactive" Version="5.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="System.Reactive" Version="6.0.0" />
+	</ItemGroup>
   <!--<ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
 		<PackageReference Include="System.Reactive" Version="5.0.0" />
 	</ItemGroup>
 	<ItemGroup Condition=" '$(TargetFramework)' == 'net461'">
 		<PackageReference Include="System.Reactive" Version="4.4.1" />
 	</ItemGroup>-->
-
-
 </Project>

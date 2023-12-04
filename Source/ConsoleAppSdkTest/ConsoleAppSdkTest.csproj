@@ -1,14 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net48</TargetFramework>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <Platforms>AnyCPU;x86;x64</Platforms>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFrameworks>net7.0</TargetFrameworks>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<Platforms>AnyCPU;x86;x64</Platforms>
+		<Configurations>Debug;Release;net70Release;net70Debug</Configurations>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Tx.Windows.TypeGeneration\Tx.Windows.TypeGeneration.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Tx.Windows.TypeGeneration\Tx.Windows.TypeGeneration.csproj" />
+	</ItemGroup>
 
 </Project>

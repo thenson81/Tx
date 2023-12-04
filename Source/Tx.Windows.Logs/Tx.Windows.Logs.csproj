@@ -18,9 +18,8 @@
 		<RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
 		<DelaySign>false</DelaySign>
 		<Platforms>AnyCPU;x64;x86</Platforms>
-    <Configurations>Debug;Release</Configurations>
+		<Configurations>Debug;Release;net70Release;net70Debug</Configurations>
 	</PropertyGroup>
-
 	<ItemGroup>
 		<ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
 		<ProjectReference Include="..\Tx.Windows\Tx.Windows.csproj" />

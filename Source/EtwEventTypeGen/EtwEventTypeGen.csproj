@@ -1,19 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>netstandard2.0;net48</TargetFrameworks>
+    <TargetFrameworks>net7.0</TargetFrameworks>
     <!--<TargetFrameworks>net48;net461</TargetFrameworks>-->
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <Version>1.0.1</Version>
     <Platforms>AnyCPU;x64;x86</Platforms>
-    <Configurations>Debug;Release</Configurations>
+    <Configurations>Debug;Release;net70Release;net70Debug</Configurations>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Tx.Windows.TypeGeneration\Tx.Windows.TypeGeneration.csproj" />
   </ItemGroup>
-
 </Project>

@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <!--<TargetFrameworks>net48;net461</TargetFrameworks>-->
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
@@ -19,18 +18,15 @@
     <RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
     <DelaySign>false</DelaySign>
     <Platforms>AnyCPU;x64;x86</Platforms>
-    <Configurations>Debug;Release</Configurations>
+    <Configurations>Debug;Release;net70Release;net70Debug</Configurations>
   </PropertyGroup>
-    
   <ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
     <PackageReference Include="System.Reactive" Version="5.0.0" />
   </ItemGroup>
-  
   <ItemGroup>
     <ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
     <ProjectReference Include="..\Tx.Windows\Tx.Windows.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <Reference Include="Bond">
       <HintPath>..\..\References\DESKTOPCLR45\Bond.dll</HintPath>
@@ -40,5 +36,4 @@
       <HintPath>..\..\References\DESKTOPCLR45\Bond.Attributes.dll</HintPath>
     </Reference>
   </ItemGroup>
-
 </Project>
