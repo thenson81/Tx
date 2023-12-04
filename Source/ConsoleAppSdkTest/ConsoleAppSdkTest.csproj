@@ -5,7 +5,7 @@
 		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
 		<PlatformTarget>AnyCPU</PlatformTarget>
 		<Platforms>AnyCPU;x86;x64</Platforms>
-		<Configurations>net70Release;net70Debug</Configurations>
+		<Configurations>Release;Debug</Configurations>
 	</PropertyGroup>
 
 	<ItemGroup>

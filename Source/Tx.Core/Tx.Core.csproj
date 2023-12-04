@@ -18,47 +18,12 @@
 		<RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
 		<DelaySign>false</DelaySign>
 		<Platforms>AnyCPU;x64;x86</Platforms>
-		<Configurations>net70Release;net70Debug</Configurations>
+		<Configurations>Release;Debug</Configurations>
 		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 		<BaseIntermediateOutputPath>..\..\Build\obj\</BaseIntermediateOutputPath>
 		<BaseOutputPath>..\..\Build\</BaseOutputPath>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0|AnyCPU'">
 		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0|x64'">
-		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0|x86'">
-		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0|AnyCPU'">
-		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0|x64'">
-		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0|x86'">
-		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='net70Release|net7.0|AnyCPU'">
-		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='net70Release|net7.0|x64'">
-		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='net70Release|net7.0|x86'">
-		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='net70Debug|net7.0|AnyCPU'">
-		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='net70Debug|net7.0|x64'">
-		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='net70Debug|net7.0|x86'">
-		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
-	</PropertyGroup>
+	</PropertyGroup>	
 	<ItemGroup>
 		<PackageReference Include="System.Reactive" Version="6.0.0" />
 	</ItemGroup>

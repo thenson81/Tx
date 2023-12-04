@@ -8,7 +8,7 @@
     <DelaySign>false</DelaySign>
     <Version>1.0.1</Version>
     <Platforms>AnyCPU;x64;x86</Platforms>
-    <Configurations>net70Release;net70Debug</Configurations>
+	  <Configurations>Release;Debug</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tx.Windows.TypeGeneration\Tx.Windows.TypeGeneration.csproj" />
