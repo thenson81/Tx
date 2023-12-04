@@ -18,6 +18,9 @@
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/Microsoft/Tx.git</RepositoryUrl>
 		<DelaySign>false</DelaySign>
+		<Platforms>AnyCPU;x64;x86</Platforms>
+		<Configurations>Release;Debug</Configurations>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 		<BaseIntermediateOutputPath>..\..\Build\obj\</BaseIntermediateOutputPath>
 		<BaseOutputPath>..\..\Build\</BaseOutputPath>
 		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
