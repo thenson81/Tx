@@ -5,12 +5,12 @@ namespace Tx.Bond
     using System;
     using System.Collections.Generic;
     using System.Reactive;
-    using System.Text;
-    using System.Web.Script.Serialization;
+    using System.Text;  
 
     using global::Bond;
     using global::Bond.IO.Safe;
     using global::Bond.Protocols;
+    using Nancy.Json;
 
     public class BondJsonEnvelopeTypeMap : EnvelopeTypeMap
     {
@@ -69,8 +69,10 @@ namespace Tx.Bond
         private object DeserializeJson(byte[] data, Type outputType)
         {
             var json = Encoding.UTF8.GetString(data);
-
-            return this.JsonSerializer.Deserialize(json, outputType);
+            return json;
+            //outputType.GetType();
+            //return this.JsonSerializer.Deserialize<>(json);
+           
         }
     }
 }

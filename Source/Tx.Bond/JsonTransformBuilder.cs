@@ -1,9 +1,10 @@
 namespace Tx.Bond
 {
+    using Nancy.Json;
     using System;
+    using System.IO;
     using System.Reactive;
     using System.Text;
-    using System.Web.Script.Serialization;
 
     using Tx.Core;
 
@@ -41,7 +42,7 @@ namespace Tx.Bond
         internal sealed class JsonTransformer<T>
         {
             private readonly StringBuilder stringBuilder = new StringBuilder(64);
-
+           
             private readonly string manifestId;
 
             private readonly JavaScriptSerializer serializer;
@@ -57,8 +58,8 @@ namespace Tx.Bond
                 var now = DateTime.UtcNow;
 
                 this.stringBuilder.Clear();
-
-                this.serializer.Serialize(value, this.stringBuilder);
+                var writer = new StringWriter(stringBuilder);
+                this.serializer.Serialize(value, writer);
 
                 var json = this.stringBuilder.ToString();
 

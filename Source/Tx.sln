@@ -143,10 +143,13 @@ Global
 		{E881AB95-6779-420F-A90C-E6B3B1486B78}.net70Release|x86.Build.0 = net70|x86
 		{5A5FFB39-09AE-4305-BFA6-2B787E6FB24A}.net70Debug|Any CPU.ActiveCfg = net70Debug|Any CPU
 		{5A5FFB39-09AE-4305-BFA6-2B787E6FB24A}.net70Debug|x64.ActiveCfg = net70Debug|x64
+		{5A5FFB39-09AE-4305-BFA6-2B787E6FB24A}.net70Debug|x64.Build.0 = net70Debug|x64
 		{5A5FFB39-09AE-4305-BFA6-2B787E6FB24A}.net70Debug|x86.ActiveCfg = net70Debug|x86
+		{5A5FFB39-09AE-4305-BFA6-2B787E6FB24A}.net70Debug|x86.Build.0 = net70Debug|x86
 		{5A5FFB39-09AE-4305-BFA6-2B787E6FB24A}.net70Release|Any CPU.ActiveCfg = net70|Any CPU
 		{5A5FFB39-09AE-4305-BFA6-2B787E6FB24A}.net70Release|x64.ActiveCfg = net70|x64
 		{5A5FFB39-09AE-4305-BFA6-2B787E6FB24A}.net70Release|x86.ActiveCfg = net70|x86
+		{5A5FFB39-09AE-4305-BFA6-2B787E6FB24A}.net70Release|x86.Build.0 = net70|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

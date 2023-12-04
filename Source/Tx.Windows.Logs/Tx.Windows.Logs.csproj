@@ -24,6 +24,9 @@
 		<BaseOutputPath>..\..\Build\</BaseOutputPath>
 	</PropertyGroup>
 	<ItemGroup>
+	  <PackageReference Include="System.Diagnostics.EventLog" Version="8.0.0" />
+	</ItemGroup>
+	<ItemGroup>
 		<ProjectReference Include="..\Tx.Core\Tx.Core.csproj" />
 		<ProjectReference Include="..\Tx.Windows\Tx.Windows.csproj" />
 	</ItemGroup>
