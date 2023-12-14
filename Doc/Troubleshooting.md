@@ -28,7 +28,8 @@ To troubleshoot Tx does read event occurences and can format them:
 * In the Properties\Debugging add some manifest and etl files as command line arguments
 * Enable first-chance exceptions and run
 
-This allows to debug all non-UI parts of Tx (type-generation, reading, formatting). It is useful to catch problems such as manifest that mismatches the event occurrences.
+This allows to debug all non-UI parts of Tx (type-generation, reading, formatting). 
+It is useful to catch problems such as manifest that mismatches the event occurrences.
 
 ## 3.Troubleshooting the LINQPad Driver
 
